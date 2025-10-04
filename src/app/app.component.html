@@ -1,19 +1,9 @@
-<div class="theme-container" [ngClass]="{'dark': enableDarkMode}">
+<div class="theme-container">
   <div class="bg-gray-light dark:bg-gray-dark app-container relative text-gray-dark dark:text-gray-light">
     <div class="flex flex-row items-center justify-end p-1">
-      <div [ngClass]="{'border-blue': !enableDarkMode, 'border-transparent': enableDarkMode}"
-        class="shadow-sm w-6 h-6 cursor-pointer hover:opacity-80 border-2 rounded-full bg-gray-light mr-0.5"
-        (click)="toggleTheme()"></div>
-      <div [ngClass]="{'border-blue': enableDarkMode, 'border-transparent': !enableDarkMode}"
-        class="shadow-sm w-6 h-6 cursor-pointer hover:opacity-80 border-2 rounded-full bg-gray-dark"
-        (click)="toggleTheme()"></div>
+      <app-theme-switcher></app-theme-switcher>
       <div class="border-r border-border-light dark:border-border-dark h-4 mx-2"></div>
-      <img [ngClass]="{'border-blue': currentLanguage === 'en-US', 'border-transparent': currentLanguage !== 'en-US'}"
-        class="shadow-sm w-7 h-7 cursor-pointer hover:opacity-80 border-2 rounded-full mr-0.5"
-        (click)="changeLanguage('en-US')" [src]="'./assets/images/icons/icons8-usa-48.png'">
-      <img [ngClass]="{'border-blue': currentLanguage === 'pt-BR', 'border-transparent': currentLanguage !== 'pt-BR'}"
-        class="shadow-sm w-7 h-7 cursor-pointer hover:opacity-80 border-2 rounded-full"
-        (click)="changeLanguage('pt-BR')" [src]="'./assets/images/icons/icons8-brazil-48.png'">
+      <app-language-switcher></app-language-switcher>
     </div>
     <div class="flex flex-row pt-24 px-12 max-w-7xl">
       <div class="flex flex-col items-center justify-center" style="max-width: 150px;">

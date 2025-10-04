@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Define a custom variant for dark mode */
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-transparent: transparent;
+  --color-blue: #1fb6ff;
+  --color-purple: #7e5bef;
+  --color-pink: #ff49db;
+  --color-orange: #ff7849;
+  --color-green: #13ce66;
+  --color-yellow: #ffc82c;
+  --color-gray-dark: #273444;
+  --color-gray: #8492a6;
+  --color-gray-light: #d3dce6;
+  --color-border-light: rgba(0,0,0,.12);
+  --color-border-dark: rgba(255,255,255,.12);
+  --font-display: 'Asap', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Asap', sans-serif;
+}

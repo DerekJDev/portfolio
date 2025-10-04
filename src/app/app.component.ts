@@ -1,66 +1,25 @@
 import { Component, EffectRef, OnDestroy, OnInit, effect, signal } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ReferenceService } from 'src/core/reference-service.service';
+import { ThemeSwitcherComponent } from '../components/theme-switcher/theme-switcher.component';
+import { LanguageSwitcherComponent } from '../components/language-switcher/language-switcher.component';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
+    styleUrls: ['./app.component.css'],
     standalone: false
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'my-portfolio';
-  enableDarkMode = false;
-  currentLanguage = 'en-US';
-  autoTheme = new FormControl(false);
-  darkModeEffect: any;
 
   constructor(private refService: ReferenceService) {}
 
   ngOnInit(): void {
-    this.checkTheme();
-    this.checkLanguage();
+    // Language initialization is now handled by the LanguageService
   }
 
   ngOnDestroy(): void {
-    this.darkModeEffect?.destroy();
+    // Cleanup if needed
   }
-
-  checkTheme() {
-    const cachedSetting = this.refService.getAppSettings('enableDarkMode');
-    const cachedAutoThemeSetting = this.refService.getAppSettings('autoTheme');
-    this.autoTheme.setValue(cachedAutoThemeSetting ? cachedAutoThemeSetting : false)
-
-    if (this.autoTheme.value) {
-      // Set up theme detection
-      this.refService.isDarkMode();
-      this.darkModeEffect = effect(() => {
-        this.enableDarkMode = this.refService.machineDarkMode();
-      });
-    } else {
-      // Go off of last saved theme selection
-      this.enableDarkMode = cachedSetting ? cachedSetting : false;
-    }
-
-  }
-
-  checkLanguage() {
-    const cachedSetting = this.refService.getAppSettings('language');
-    if (cachedSetting) {
-      this.refService.setLanguage(cachedSetting);
-      this.currentLanguage = cachedSetting;
-    }
-  }
-
-  toggleTheme() {
-    this.enableDarkMode = !this.enableDarkMode;
-    this.refService.setAppSettings('enableDarkMode', this.enableDarkMode);
-  }
-
-  changeLanguage(language: 'en-US' | 'pt-BR') {
-    this.refService.setLanguage(language);
-    this.currentLanguage = language;
-  }
-
-
 }

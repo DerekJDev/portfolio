@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from 'src/shared.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ThemeSwitcherComponent } from '../components/theme-switcher/theme-switcher.component';
+import { LanguageSwitcherComponent } from '../components/language-switcher/language-switcher.component';
 
 import { TranslateModule, TranslateLoader, TranslateCompiler } from '@ngx-translate/core';
 import { TranslateMessageFormatCompiler } from 'ngx-translate-messageformat-compiler';
@@ -24,6 +26,8 @@ export function dynamicTransLoaderFactory(http: HttpClient) {
         AppComponent
     ],
     bootstrap: [AppComponent], imports: [SharedModule,
+        ThemeSwitcherComponent,
+        LanguageSwitcherComponent,
         TranslateModule.forRoot({
             defaultLanguage: 'en-US',
             loader: {
