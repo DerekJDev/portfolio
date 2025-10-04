@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,28 +20,21 @@ export function dynamicTransLoaderFactory(http: HttpClient) {
   return new dynamicTranslateLoader(http, 'en-US');
 }
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    SharedModule,
-    HttpClientModule,
-    TranslateModule.forRoot({
-      defaultLanguage: 'en-US',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: dynamicTransLoaderFactory,
-        deps: [HttpClient],
-      },
-      compiler: {
-        provide: TranslateCompiler,
-        useClass: TranslateMessageFormatCompiler
-      }
-    }),
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent
+    ],
+    bootstrap: [AppComponent], imports: [SharedModule,
+        TranslateModule.forRoot({
+            defaultLanguage: 'en-US',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: dynamicTransLoaderFactory,
+                deps: [HttpClient],
+            },
+            compiler: {
+                provide: TranslateCompiler,
+                useClass: TranslateMessageFormatCompiler
+            }
+        }),
+        AppRoutingModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
