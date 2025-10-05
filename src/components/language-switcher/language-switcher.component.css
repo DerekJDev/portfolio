@@ -1,0 +1,49 @@
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  width: 12rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  z-index: 9999;
+}
+
+.dark .language-dropdown {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  color: #374151; /* Default text color for light mode */
+}
+
+.language-option:hover {
+  background-color: #f3f4f6;
+}
+
+.language-option.selected {
+  background-color: #dbeafe;
+}
+
+/* Dark mode styles */
+.dark .language-option {
+  color: #d1d5db; /* Light text color for dark mode */
+}
+
+.dark .language-option:hover {
+  background-color: #374151;
+}
+
+.dark .language-option.selected {
+  background-color: #1e3a8a;
+}

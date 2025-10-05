@@ -1,4 +1,229 @@
-.theme-container, .app-container {
-  height: 100%;
-  width: 100%;
+@reference "../styles.css";
+
+/* Navigation Styles */
+.nav-link {
+  @apply text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+}
+
+.mobile-menu {
+  margin: 0px -24px;
+}
+/* Button Styles */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 font-medium py-3 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+}
+
+/* Skill Tags */
+.skill-tag {
+  @apply bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.tech-tag {
+  @apply bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs font-medium;
+}
+
+/* Skill Categories */
+.skill-category {
+  @apply mb-6;
+}
+
+/* Experience Cards */
+.experience-card {
+  @apply bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300;
+}
+
+/* Expandable Achievements */
+.achievements-list {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.achievement-item {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.achievement-toggle {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.achievement-toggle:hover {
+  @apply transform scale-105;
+}
+
+.achievement-arrow {
+  @apply transition-transform duration-200 ease-in-out;
+}
+
+/* Project Cards */
+.project-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.project-image {
+  @apply transition-transform duration-300;
+}
+
+.project-card:hover .project-image {
+  @apply scale-105;
+}
+
+.project-link {
+  @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium transition-colors duration-200 flex items-center;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2.5rem;
+  }
+
+  .text-6xl {
+    font-size: 3.5rem;
+  }
+}
+
+/* Focus States for Accessibility */
+.btn-primary:focus,
+.btn-secondary:focus,
+.nav-link:focus,
+.project-link:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
+}
+
+/* Loading States */
+.loading {
+  @apply animate-pulse;
+}
+
+/* Hover Effects */
+.hover-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+/* Glass Effect */
+.glass {
+  @apply bg-white/10 dark:bg-gray-900/10 backdrop-blur-md border border-white/20 dark:border-gray-700/20;
+}
+
+/* Custom Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Hero Section Styles */
+.social-link-hero {
+  @apply w-12 h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg;
+}
+
+.social-link-hero i {
+  @apply text-xl;
+}
+
+/* Enhanced Button Styles */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center;
+}
+
+.btn-secondary {
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 font-semibold py-4 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center;
+}
+
+/* Project Cards Enhanced */
+.project-card-enhanced {
+  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden;
+}
+
+.project-image-enhanced {
+  @apply transition-all duration-500;
+}
+
+.project-card-enhanced:hover .project-image-enhanced {
+  @apply scale-105;
+}
+
+.project-link-enhanced {
+  @apply w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110;
+}
+
+.tech-tag-enhanced {
+  @apply bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-800;
+}
+
+/* Contact Section Styles */
+.contact-item {
+  @apply flex items-start space-x-4 p-4 rounded-lg transition-colors duration-200;
+}
+
+.contact-item a {
+  @apply text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200;
+}
+
+.contact-icon {
+  @apply w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0;
+}
+
+.social-link-contact {
+  @apply flex flex-col items-center p-4 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105;
+}
+
+.social-link-contact:hover .social-link-text {
+  @apply text-white;
+}
+
+.social-link-text {
+  @apply text-sm font-medium mt-2;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
 }

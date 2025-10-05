@@ -1,28 +1,325 @@
-@import "tailwindcss";
+/* Import Tailwind CSS */
+@import 'tailwindcss';
 
-/* Define a custom variant for dark mode */
+/* Import LineIcons */
+@import 'lineicons/dist/lineicons.css';
+
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --color-transparent: transparent;
-  --color-blue: #1fb6ff;
-  --color-purple: #7e5bef;
-  --color-pink: #ff49db;
-  --color-orange: #ff7849;
-  --color-green: #13ce66;
-  --color-yellow: #ffc82c;
-  --color-gray-dark: #273444;
-  --color-gray: #8492a6;
-  --color-gray-light: #d3dce6;
-  --color-border-light: rgba(0,0,0,.12);
-  --color-border-dark: rgba(255,255,255,.12);
-  --font-display: 'Asap', sans-serif;
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
-  font-family: 'Asap', sans-serif;
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white;
+}
+
+/* Custom CSS Variables for consistent theming */
+:root {
+  --color-primary: 59 130 246; /* blue-500 */
+  --color-primary-dark: 37 99 235; /* blue-600 */
+  --color-secondary: 107 114 128; /* gray-500 */
+  --color-accent: 139 92 246; /* purple-500 */
+
+  /* Light theme */
+  --color-bg: 255 255 255; /* white */
+  --color-bg-secondary: 249 250 251; /* gray-50 */
+  --color-text: 17 24 39; /* gray-900 */
+  --color-text-secondary: 75 85 99; /* gray-600 */
+  --color-border: 229 231 235; /* gray-200 */
+}
+
+.dark {
+  --color-bg: 17 24 39; /* gray-900 */
+  --color-bg-secondary: 31 41 55; /* gray-800 */
+  --color-text: 255 255 255; /* white */
+  --color-text-secondary: 209 213 219; /* gray-300 */
+  --color-border: 55 65 81; /* gray-700 */
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-bg-secondary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-text-secondary));
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
+}
+
+/* Button focus styles */
+button:focus,
+a:focus {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: 0 0 0;
+    --color-text: 0 0 0;
+    --color-bg: 255 255 255;
+  }
+
+  .dark {
+    --color-primary: 255 255 255;
+    --color-text: 255 255 255;
+    --color-bg: 0 0 0;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Disable hero animations for users who prefer reduced motion */
+  .hero-bg-animated {
+    animation: none !important;
+  }
+
+  .profile-pulse {
+    animation: none !important;
+  }
+}
+
+/* Hero Background Animations */
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes subtleFade {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes gentleScale {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+@keyframes profilePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0.1);
+  }
+}
+
+/* Animated background elements */
+.hero-bg-animated {
+  background: linear-gradient(45deg,
+    rgba(59, 130, 246, 0.15),
+    rgba(139, 92, 246, 0.2),
+    rgba(16, 185, 129, 0.15),
+    rgba(59, 130, 246, 0.1),
+    rgba(139, 92, 246, 0.15),
+    rgba(236, 72, 153, 0.1)
+  );
+  background-size: 600% 600%;
+  animation: gradientWave 20s ease-in-out infinite;
+  will-change: background-position;
+}
+
+.dark .hero-bg-animated {
+  background: linear-gradient(45deg,
+    rgba(59, 130, 246, 0.08),
+    rgba(139, 92, 246, 0.12),
+    rgba(16, 185, 129, 0.08),
+    rgba(59, 130, 246, 0.05),
+    rgba(139, 92, 246, 0.08),
+    rgba(236, 72, 153, 0.06)
+  );
+  background-size: 600% 600%;
+  animation: gradientWave 20s ease-in-out infinite;
+}
+
+/* Profile image pulse animation */
+.profile-pulse {
+  animation: profilePulse 3s ease-in-out infinite;
+}
+
+/* Custom component styles */
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+/* Container max-widths */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-custom {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding: 0 2rem;
+  }
 }

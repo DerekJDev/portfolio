@@ -1,0 +1,5 @@
+@reference "../../styles.css";
+
+.social-link {
+  @apply w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-400 dark:hover:text-white transition-all duration-200 transform hover:scale-110 hover:shadow-lg;
+}

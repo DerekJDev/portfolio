@@ -1,3 +1,107 @@
 {
-  "hiImDerek": "Olá! Eu sou Derek."
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "openMainMenu": "Abrir menu principal"
+  },
+  "hero": {
+    "badge": "Disponível para Trabalho",
+    "title": "Olá, eu sou Derek Johnson",
+    "subtitle": "Arquiteto Front-End e Co-Fundador | Construindo experiências web intuitivas e poderosas",
+    "cta": {
+      "viewMyWork": "Ver Meu Trabalho",
+      "resume": "Baixar Currículo"
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Desenvolvedor front-end apaixonado com expertise em Angular, TypeScript e tecnologias web modernas. Especializo-me em criar aplicações amigáveis e performáticas que oferecem experiências excepcionais ao usuário.",
+    "skills": {
+      "title": "Habilidades Técnicas",
+      "frontend": {
+        "title": "Desenvolvimento Front-End"
+      },
+      "backend": {
+        "title": "Backend & Ferramentas"
+      },
+      "outsideOfWork": {
+        "title": "Fora do Trabalho",
+        "soccer": "Futebol",
+        "skiing": "Esqui",
+        "mountainBiking": "Bicicleta de Montanha",
+        "marathonRunner": "2X Corredor de Maratona... (Correr é chato 🙃)",
+        "guitar": "Violão"
+      }
+    },
+    "experience": {
+      "title": "Experiência Profissional",
+      "description": "Com mais de 5 anos de experiência em desenvolvimento front-end, entreguei com sucesso inúmeros projetos, desde sites de pequenas empresas até aplicações empresariais de grande escala.",
+      "point1": "Lidei o desenvolvimento de aplicações Angular complexas atendendo milhares de usuários",
+      "point2": "Implementei designs responsivos usando frameworks CSS modernos e técnicas avançadas",
+      "point3": "Colaborei com equipes multifuncionais para entregar soluções de software de alta qualidade"
+    }
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "subtitle": "Uma jornada de crescimento, inovação e entrega de experiências excepcionais ao usuário",
+    "more": "mais...",
+    "less": "menos...",
+    "current": {
+      "title": "Arquiteto Front-End e Co-Fundador",
+      "company": "Tech Solutions Inc.",
+      "duration": "2022 - Presente",
+      "description": "Liderando decisões de arquitetura front-end e co-fundando uma empresa de soluções tecnológicas focada em aplicações web modernas.",
+      "achievement1": "Arquitetou e desenvolveu aplicações Angular escaláveis atendendo mais de 10.000 usuários",
+      "achievement2": "Implementou práticas modernas de desenvolvimento incluindo pipelines CI/CD e testes automatizados",
+      "achievement3": "Mentorou desenvolvedores júnior e estabeleceu padrões de codificação e melhores práticas"
+    },
+    "previous": {
+      "title": "Desenvolvedor Front-End",
+      "company": "Digital Agency Co.",
+      "duration": "2020 - 2022",
+      "description": "Desenvolveu aplicações web responsivas e colaborou com equipes de design para criar interfaces envolventes.",
+      "achievement1": "Construiu aplicações web responsivas usando Angular, TypeScript e frameworks CSS modernos",
+      "achievement2": "Otimizou a performance das aplicações resultando em 40% de tempos de carregamento mais rápidos"
+    }
+  },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "subtitle": "Uma vitrine do meu trabalho recente e expertise técnica",
+    "project1": {
+      "title": "Plataforma E-Commerce",
+      "description": "Uma plataforma de e-commerce completa construída com Angular, apresentando gerenciamento de estoque em tempo real, processamento de pagamentos e painel administrativo."
+    },
+    "project2": {
+      "title": "App de Banco Mobile",
+      "description": "Aplicação bancária móvel multiplataforma desenvolvida com Angular e Ionic, fornecendo serviços financeiros seguros aos clientes."
+    },
+    "project3": {
+      "title": "Dashboard de Analytics",
+      "description": "Dashboard interativo de visualização de dados com gráficos e relatórios em tempo real, construído para clientes empresariais rastrearem métricas de negócio."
+    },
+    "viewCode": "Ver Código",
+    "liveDemo": "Demo ao Vivo"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Pronto para trabalharmos juntos? Vamos discutir seu próximo projeto",
+    "getInTouch": "Informações de Contato",
+    "readyToWork": "Pronto para trabalharmos juntos?",
+    "letsDiscuss": "Vamos discutir seu próximo projeto e trazer suas ideias à vida com tecnologias web modernas.",
+    "startConversation": "Iniciar uma Conversa",
+    "location": "Localização",
+    "followMe": "Siga-me",
+    "downloadResume": "Baixar Currículo",
+    "resumeDescription": "Obtenha uma visão detalhada da minha experiência, habilidades e conquistas em formato PDF.",
+    "downloadPDF": "Baixar PDF"
+  },
+  "footer": {
+    "rightsReserved": "Todos os direitos reservados."
+  },
+  "language": {
+    "switch": "Trocar Idioma"
+  }
 }

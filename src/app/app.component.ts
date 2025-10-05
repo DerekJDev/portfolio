@@ -1,25 +1,55 @@
-import { Component, EffectRef, OnDestroy, OnInit, effect, signal } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { ReferenceService } from 'src/core/reference-service.service';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ThemeService } from '../core/theme.service';
+import { LanguageService } from '../core/language.service';
 import { ThemeSwitcherComponent } from '../components/theme-switcher/theme-switcher.component';
 import { LanguageSwitcherComponent } from '../components/language-switcher/language-switcher.component';
-
+import { SocialLinkComponent } from '../components/social-link/social-link.component';
+import * as utils from '../core/utils';
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css'],
-    standalone: false
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    CommonModule,
+    TranslateModule,
+    ThemeSwitcherComponent,
+    LanguageSwitcherComponent,
+    SocialLinkComponent
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit, OnDestroy {
-  title = 'my-portfolio';
+export class App implements OnInit {
+  isMobileMenuOpen = false;
+  utils = utils;
+  expandedAchievements: { [key: number]: boolean } = {};
 
-  constructor(private refService: ReferenceService) {}
+  constructor(
+    private translateService: TranslateService,
+    private themeService: ThemeService,
+    public languageService: LanguageService
+  ) {}
 
   ngOnInit(): void {
-    // Language initialization is now handled by the LanguageService
+    // Apply initial theme
+    this.themeService.setTheme(this.themeService.isDarkMode);
+    console.log(this.languageService.currentLanguage);
   }
 
-  ngOnDestroy(): void {
-    // Cleanup if needed
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
+  }
+
+  toggleAchievements(index: number): void {
+    this.expandedAchievements[index] = !this.expandedAchievements[index];
+  }
+
+  isAchievementsExpanded(index: number): boolean {
+    return this.expandedAchievements[index] || false;
   }
 }

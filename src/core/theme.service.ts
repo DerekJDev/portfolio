@@ -20,10 +20,20 @@ export class ThemeService {
   }
 
   constructor() {
-    this.initializeTheme();
+    // Delay initialization to ensure DOM is ready
+    if (typeof window !== 'undefined') {
+      setTimeout(() => {
+        this.initializeTheme();
+      }, 0);
+    }
   }
 
   private getInitialTheme(): boolean {
+    // Check if we're in browser environment
+    if (typeof window === 'undefined' || typeof localStorage === 'undefined') {
+      return false; // Default to light mode
+    }
+
     // Check localStorage first
     const savedTheme = localStorage.getItem(this.THEME_KEY);
     if (savedTheme) {
@@ -52,6 +62,8 @@ export class ThemeService {
   }
 
   private applyTheme(isDark: boolean): void {
+    if (typeof document === 'undefined') return;
+
     const html = document.documentElement;
     if (isDark) {
       html.classList.add(this.DARK_THEME);
@@ -61,6 +73,8 @@ export class ThemeService {
   }
 
   private saveTheme(isDark: boolean): void {
+    if (typeof localStorage === 'undefined') return;
+
     const theme = isDark ? this.DARK_THEME : this.LIGHT_THEME;
     localStorage.setItem(this.THEME_KEY, theme);
   }

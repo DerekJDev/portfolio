@@ -16,18 +16,18 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular/build:browser",
+          "builder": "@angular/build:application",
           "options": {
             "outputPath": "dist/my-portfolio",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "css",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              "./node_modules/lineicons/dist/line-icons.css"
+              "./node_modules/lineicons/dist/lineicons.css"
             ],
             "scripts": []
           },
@@ -41,16 +41,18 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "30kb",
+                  "maximumError": "40kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "optimization": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -86,12 +88,26 @@
             "styles": ["src/styles.css"],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "21e9345b-c0cd-4a7e-b42a-444ae70b2d4f"
+    "analytics": "21e9345b-c0cd-4a7e-b42a-444ae70b2d4f",
+    "cache": {
+      "enabled": true,
+      "path": ".angular/cache",
+      "environment": "all"
+    }
   },
   "schematics": {
     "@schematics/angular:component": {

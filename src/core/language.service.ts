@@ -51,6 +51,10 @@ export class LanguageService {
   }
 
   private getInitialLanguage(): SupportedLanguage {
+    if (typeof localStorage === 'undefined') {
+      return this.DEFAULT_LANGUAGE;
+    }
+
     const savedLanguage = localStorage.getItem(this.LANGUAGE_KEY) as SupportedLanguage;
     if (savedLanguage && this.languages.some(lang => lang.code === savedLanguage)) {
       return savedLanguage;
@@ -75,6 +79,8 @@ export class LanguageService {
   }
 
   private saveLanguage(language: SupportedLanguage): void {
+    if (typeof localStorage === 'undefined') return;
+
     localStorage.setItem(this.LANGUAGE_KEY, language);
   }
 

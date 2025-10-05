@@ -9,18 +9,29 @@ import { ThemeService } from '../../core/theme.service';
   template: `
     <div
       (click)="toggleTheme()"
-      class="relative w-14 h-8 rounded-3xl bg-slate-300 dark:bg-zinc-700 cursor-pointer transition-colors duration-200 hover:opacity-80"
+      class="relative w-16 h-8 rounded-3xl bg-slate-300 dark:bg-zinc-700 cursor-pointer transition-colors duration-200 flex items-center justify-between px-2"
     >
+      <!-- Sun icon for light mode -->
+      <i class="lni lni-moon-half-right-5 text-sm transition-opacity duration-200 z-10 pointer-events-none"
+         [class.opacity-100]="themeService.isDarkMode"
+         [class.opacity-30]="!themeService.isDarkMode"></i>
+
+      <!-- Moon icon for dark mode -->
+      <i class="lni lni-sun-1 text-sm transition-opacity duration-200 z-10 pointer-events-none"
+         [class.opacity-100]="!themeService.isDarkMode"
+         [class.opacity-30]="themeService.isDarkMode"></i>
+
+      <!-- Background indicator -->
       <div
         [class]="toggleClasses()"
-        class="absolute top-1 rounded-full w-6 h-6 bg-blue-500 transition-all duration-200"
+        class="absolute top-1 rounded-full w-6 h-6 bg-white dark:bg-gray-800 transition-all duration-200 shadow-sm hover:scale-110 hover:shadow-md"
       ></div>
     </div>
   `,
   styles: []
 })
 export class ThemeSwitcherComponent {
-  constructor(private themeService: ThemeService) {}
+  constructor(public themeService: ThemeService) {}
 
   // Computed property for toggle position classes
   toggleClasses = computed(() =>

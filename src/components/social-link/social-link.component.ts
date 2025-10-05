@@ -1,12 +1,27 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-    selector: 'app-social-link',
-    templateUrl: './social-link.component.html',
-    styleUrls: ['./social-link.component.css'],
-    standalone: true
+  selector: 'app-social-link',
+  standalone: true,
+  imports: [CommonModule],
+  template: `
+    <a
+      [href]="url"
+      [target]="target"
+      [rel]="rel"
+      class="social-link"
+      [title]="platform + ' profile'"
+    >
+      <i [class]="icon"></i>
+    </a>
+  `,
+  styleUrl: './social-link.component.css'
 })
 export class SocialLinkComponent {
-
+  @Input() platform!: string;
+  @Input() url!: string;
+  @Input() icon!: string;
+  @Input() target: string = '_blank';
+  @Input() rel: string = 'noopener noreferrer';
 }
