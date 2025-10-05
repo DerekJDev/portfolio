@@ -27,7 +27,7 @@ body {
   --color-primary: 59 130 246; /* blue-500 */
   --color-primary-dark: 37 99 235; /* blue-600 */
   --color-secondary: 107 114 128; /* gray-500 */
-  --color-accent: 139 92 246; /* purple-500 */
+  --color-accent: 59 130 246; /* blue-500 */
 
   /* Light theme */
   --color-bg: 255 255 255; /* white */
@@ -265,10 +265,10 @@ a:focus {
 .hero-bg-animated {
   background: linear-gradient(45deg,
     rgba(59, 130, 246, 0.15),
-    rgba(139, 92, 246, 0.2),
+    rgba(37, 99, 235, 0.2),
     rgba(16, 185, 129, 0.15),
     rgba(59, 130, 246, 0.1),
-    rgba(139, 92, 246, 0.15),
+    rgba(37, 99, 235, 0.15),
     rgba(236, 72, 153, 0.1)
   );
   background-size: 600% 600%;
@@ -279,10 +279,10 @@ a:focus {
 .dark .hero-bg-animated {
   background: linear-gradient(45deg,
     rgba(59, 130, 246, 0.08),
-    rgba(139, 92, 246, 0.12),
+    rgba(37, 99, 235, 0.12),
     rgba(16, 185, 129, 0.08),
     rgba(59, 130, 246, 0.05),
-    rgba(139, 92, 246, 0.08),
+    rgba(37, 99, 235, 0.08),
     rgba(236, 72, 153, 0.06)
   );
   background-size: 600% 600%;
