@@ -221,6 +221,28 @@ html {
   @apply text-sm font-medium mt-2;
 }
 
+/* Quote Section Styles */
+.quote-card {
+  @apply bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-lg border border-blue-200 dark:border-blue-700 relative overflow-hidden;
+}
+
+.quote-text {
+  @apply text-xl md:text-2xl text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed mb-4 relative;
+}
+
+.quote-author {
+  @apply text-lg text-purple-600 dark:text-purple-400 font-semibold not-italic;
+}
+
+/* About Section Quote Styles */
+.quote-card-about {
+  @apply p-8 rounded-2xl shadow-lg  border border-gray-200 dark:border-gray-600 relative overflow-hidden;
+}
+
+.quote-text-about {
+  @apply text-xl md:text-2xl text-gray-800 dark:text-gray-200 font-medium italic leading-relaxed mb-4 relative;
+}
+
 /* Print Styles */
 @media print {
   .no-print {

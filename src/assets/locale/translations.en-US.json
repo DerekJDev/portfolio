@@ -42,6 +42,11 @@
       "point1": "Led development of complex Angular applications serving thousands of users",
       "point2": "Implemented responsive designs using modern CSS frameworks and techniques",
       "point3": "Collaborated with cross-functional teams to deliver high-quality software solutions"
+    },
+    "quote": {
+      "title": "Favorite Quote",
+      "text": "Design is not just what it looks like and feels like. Design is how it works.",
+      "author": "Steve Jobs"
     }
   },
   "experience": {

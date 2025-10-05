@@ -42,6 +42,11 @@
       "point1": "Lidei o desenvolvimento de aplicações Angular complexas atendendo milhares de usuários",
       "point2": "Implementei designs responsivos usando frameworks CSS modernos e técnicas avançadas",
       "point3": "Colaborei com equipes multifuncionais para entregar soluções de software de alta qualidade"
+    },
+    "quote": {
+      "title": "Citação Favorita",
+      "text": "Design não é apenas o que parece e se sente. Design é como funciona.",
+      "author": "Steve Jobs"
     }
   },
   "experience": {
