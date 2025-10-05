@@ -1,27 +1,143 @@
-# MyPortfolio
+# Derek Johnson - Portfolio Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+A modern, responsive portfolio website built with Angular 20, featuring multilingual support, dark/light theme switching, and a comprehensive showcase of professional experience and projects.
 
-## Development server
+## 🌟 Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Multilingual Support**: English and Portuguese (Brazil) with dynamic language switching
+- **Theme Toggle**: Dark and light mode with smooth transitions
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Modern UI/UX**: Clean, professional design with smooth animations
+- **Professional Showcase**: Detailed experience, projects, and skills presentation
+- **Interactive Elements**: Expandable achievement sections and smooth scrolling navigation
+- **Social Integration**: Direct links to LinkedIn, GitHub, and X (Twitter)
 
-## Code scaffolding
+## 🚀 Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Framework**: Angular 20 with standalone components
+- **Styling**: Tailwind CSS 4.x with PostCSS
+- **Internationalization**: ngx-translate with message format compiler
+- **Icons**: LineIcons
+- **TypeScript**: 5.9.3
+- **Build Tool**: Angular CLI 20.3.4
 
-## Build
+## 📋 Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js (version 18 or higher)
+- npm or yarn package manager
 
-## Running unit tests
+## 🛠️ Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+```
 
-## Running end-to-end tests
+2. Install dependencies:
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Start the development server:
+```bash
+npm start
+```
 
-## Further help
+4. Navigate to `http://localhost:4200/` in your browser
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Main application component
+├── assets/                 # Static assets (images, documents, translations)
+│   ├── images/            # Portfolio images and logos
+│   ├── documents/         # Resume and other documents
+│   └── locale/            # Translation files
+├── components/            # Reusable UI components
+│   ├── language-switcher/ # Language toggle component
+│   ├── social-link/       # Social media link component
+│   └── theme-switcher/    # Theme toggle component
+├── core/                  # Core services and utilities
+│   ├── language.service.ts
+│   ├── theme.service.ts
+│   └── utils.ts
+└── directives/            # Custom Angular directives
+```
+
+## 🎨 Customization
+
+### Adding New Languages
+
+1. Create a new translation file in `src/assets/locale/` (e.g., `translations.es-ES.json`)
+2. Update the `LanguageService` to include the new language
+3. Add language option to the language switcher component
+
+### Modifying Content
+
+- **Personal Information**: Update `src/core/utils.ts` for social links and basic info
+- **Experience/Projects**: Modify the `experiences` and `projects` arrays in `utils.ts`
+- **Translations**: Edit the JSON files in `src/assets/locale/`
+- **Styling**: Customize Tailwind classes in component templates and CSS files
+
+### Theme Customization
+
+The theme system uses CSS custom properties. Modify the theme values in `src/core/theme.service.ts` to customize colors and styling.
+
+## 🚀 Build & Deployment
+
+### Development Build
+```bash
+npm run build
+```
+
+### Production Build
+```bash
+npm run build --configuration production
+```
+
+### Preview Production Build
+```bash
+npm run build --configuration production
+npx http-server dist/my-portfolio/browser
+```
+
+## 🧪 Testing
+
+Run unit tests:
+```bash
+npm test
+```
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+- **LinkedIn**: [Derek Johnson](https://linkedin.com/in/derek-m-johnson/)
+- **GitHub**: [DerekJDev](https://github.com/DerekJDev)
+- **X (Twitter)**: [@derekjdev](https://x.com/derekjdev)
+
+## 🙏 Acknowledgments
+
+- Built with [Angular](https://angular.io/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons by [LineIcons](https://lineicons.com/)
+- Internationalization by [ngx-translate](https://github.com/ngx-translate/core)
