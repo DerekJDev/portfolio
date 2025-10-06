@@ -1,0 +1,57 @@
+{
+  "name": "Derek Johnson | Front-End Architect & Co-Founder",
+  "short_name": "Derek Johnson",
+  "description": "Experienced Front-End Architect & Developer specializing in Angular, TypeScript, and modern web technologies. Portfolio showcasing professional projects and technical expertise.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["portfolio", "developer", "technology"],
+  "icons": [
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/favicon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "apple-touch-icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/header.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Portfolio",
+      "short_name": "Portfolio",
+      "description": "View Derek Johnson's portfolio and projects",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/assets/images/favicon.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}
