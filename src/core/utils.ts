@@ -33,7 +33,7 @@ export const appSettings = {
         image: './assets/images/experiences/tarvent.png',
         title: 'Arquiteto Front-End e Co-Fundador',
         company: 'Tarvent Inc.',
-        duration: '2022 - 2025',
+        duration: '2022 - Present',
         description: 'Como co-fundador da Tarvent, lidero a arquitetura e desenvolvimento front-end de uma plataforma SaaS que escalou para atender mais de 500 clientes, em todos os tamanhos. Guiei o ciclo de vida completo do produto, desde concepção e design até implantação e entrega empresarial, moldando a base técnica e a experiência do usuário da empresa.',
         achievements: [
           'Escalou a aplicação Angular/TypeScript para atender mais de 500 clientes, desde pequenas empresas até empresas Fortune 500',
