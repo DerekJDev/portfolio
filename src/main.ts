@@ -6,6 +6,7 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { App } from './app/app.component';
 import { ThemeService } from './core/theme.service';
 import { LanguageService } from './core/language.service';
+import { inject } from '@vercel/analytics';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,3 +26,6 @@ export const appConfig: ApplicationConfig = {
 };
 
 bootstrapApplication(App, appConfig);
+
+// Inject Vercel Analytics
+inject();
