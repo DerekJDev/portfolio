@@ -19,7 +19,7 @@ export const appSettings = {
         image: './assets/images/experiences/tarvent.png',
         title: 'Front-End Architect & Co-Founder',
         company: 'Tarvent Inc.',
-        duration: '2022 - 2025',
+        duration: '2022 - Present',
         description: 'As co-founder of Tarvent, I led the front-end architecture and development of a SaaS platform that scaled to serve 500+ clients, ranging in all different sizes. I guided the full product lifecycle, from concept and design to deployment and enterprise delivery, while shaping the company\'s technical foundation and user experience.',
         achievements: [
           'Scaled Angular/TypeScript application to serve 500+ clients, from small businesses to Fortune 500 enterprises',
