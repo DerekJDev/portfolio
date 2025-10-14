@@ -33,12 +33,13 @@
         "skiing": "Esqui",
         "mountainBiking": "Bicicleta de Montanha",
         "marathonRunner": "2X Corredor de Maratona... (Correr é chato 🙃)",
-        "guitar": "Violão"
+        "guitar": "Violão",
+        "bilingual": "Bilingue (Inglês e Português)"
       }
     },
     "experience": {
       "title": "Experiência Profissional",
-      "description": "Com mais de 5 anos de experiência em desenvolvimento front-end, entreguei com sucesso inúmeros projetos, desde sites de pequenas empresas até aplicações empresariais de grande escala.",
+      "description": "Com mais de 10 anos de experiência em desenvolvimento front-end, entreguei com sucesso inúmeros projetos, desde sites de pequenas empresas até aplicações empresariais de grande escala.",
       "point1": "Lidei o desenvolvimento de aplicações Angular complexas atendendo milhares de usuários",
       "point2": "Implementei designs responsivos usando frameworks CSS modernos e técnicas avançadas",
       "point3": "Colaborei com equipes multifuncionais para entregar soluções de software de alta qualidade"

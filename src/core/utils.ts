@@ -240,7 +240,7 @@ export const appSettings = {
       }
     }
   ],
-  email: 'derekjohnson277@gmail.com',
+  email: 'me@derekjohnson.dev',
   phone: '+19522288768',
   phoneDisplay: '(952) 228-8768',
   location: 'Lone tree, CO',

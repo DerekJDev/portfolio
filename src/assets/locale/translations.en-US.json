@@ -33,12 +33,13 @@
         "skiing": "Skiing",
         "mountainBiking": "Mountain Biking",
         "marathonRunner": "2X Marathon Runner... (Running sucks 🙃)",
-        "guitar": "Guitar"
+        "guitar": "Guitar",
+        "bilingual": "Bilingual (English and Portuguese)"
       }
     },
     "experience": {
       "title": "Professional Experience",
-      "description": "With over 5 years of experience in front-end development, I have successfully delivered numerous projects ranging from small business websites to large-scale enterprise applications.",
+      "description": "With over 10 years of experience in front-end development, I have successfully delivered numerous projects ranging from small business websites to large-scale enterprise applications.",
       "point1": "Led development of complex Angular applications serving thousands of users",
       "point2": "Implemented responsive designs using modern CSS frameworks and techniques",
       "point3": "Collaborated with cross-functional teams to deliver high-quality software solutions"
