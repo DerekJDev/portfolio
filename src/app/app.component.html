@@ -167,6 +167,7 @@
                   </h4>
                   <div class="flex flex-wrap gap-3">
                     <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">React</span>
                     <span class="skill-tag">TypeScript</span>
                     <span class="skill-tag">JavaScript</span>
                     <span class="skill-tag">HTML5</span>
@@ -421,7 +422,7 @@
                     <i class="lni lni-envelope-1"></i>
                   </div>
                   <div>
-                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Email</h4>
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">{{ 'contact.email' | translate }}</h4>
                     <a href="mailto:{{utils.appSettings.email}}"
                       class="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors">
                       {{utils.appSettings.email}}
@@ -434,7 +435,7 @@
                     <i class="lni lni-telephone-1"></i>
                   </div>
                   <div>
-                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Phone</h4>
+                    <h4 class="text-lg font-semibold text-gray-900 dark:text-white">{{ 'contact.phone' | translate }}</h4>
                     <a href="tel:{{utils.appSettings.phone}}"
                       class="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors">
                       {{utils.appSettings.phoneDisplay}}

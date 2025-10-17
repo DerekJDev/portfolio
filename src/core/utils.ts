@@ -17,30 +17,34 @@ export const appSettings = {
     {
       en: {
         image: './assets/images/experiences/tarvent.png',
-        title: 'Front-End Architect & Co-Founder',
+        title: 'Senior Front-End Engineer & Architect',
         company: 'Tarvent Inc.',
         duration: '2022 - Present',
-        description: 'As co-founder of Tarvent, I led the front-end architecture and development of a SaaS platform that scaled to serve 500+ clients, ranging in all different sizes. I guided the full product lifecycle, from concept and design to deployment and enterprise delivery, while shaping the company\'s technical foundation and user experience.',
+        description: 'Led front-end architecture for a SaaS platform providing email marketing, marketing automation, and email API solutions. Scaled the product from concept to 500+ clients, including Fortune 500 companies.',
         achievements: [
-          'Scaled Angular/TypeScript application to serve 500+ clients, from small businesses to Fortune 500 enterprises',
-          'Independently managed all front-end development and architecture, delivering enterprise-grade Angular applications while collaborating with backend team on API design and integration',
-          'Improved development velocity 40% by establishing coding standards, reusable component libraries, and design system',
-          'Reduced application load times 25% through optimized data fetching strategies and API integration patterns',
-          'Maintained 99.9% uptime across Azure cloud infrastructure through proactive monitoring and disaster recovery protocols'
+          'Developed the Angular/TypeScript front-end from prototype to production.',
+          'Reduced load times by 25% and improved development velocity by 40% through reusable component libraries and a unified design system.',
+          'Implemented scalable state management with RxJS for efficient data flow and real-time updates.',
+          'Developed cross-platform mobile apps using .NET MAUI and Blazor.',
+          'Maintained 99.9% uptime through Azure automation and system monitoring.',
+          'Worked closely with backend, product, and design teams to translate complex business requirements into secure, compliant enterprise solutions.',
+          'Mentored developers, led code reviews, and introduced standards that improved team efficiency and code quality.'
         ]
       },
       pt: {
         image: './assets/images/experiences/tarvent.png',
-        title: 'Arquiteto Front-End e Co-Fundador',
+        title: 'Engenheiro Front-End Sênior & Arquiteto',
         company: 'Tarvent Inc.',
         duration: '2022 - Present',
-        description: 'Como co-fundador da Tarvent, lidero a arquitetura e desenvolvimento front-end de uma plataforma SaaS que escalou para atender mais de 500 clientes, em todos os tamanhos. Guiei o ciclo de vida completo do produto, desde concepção e design até implantação e entrega empresarial, moldando a base técnica e a experiência do usuário da empresa.',
-        achievements: [
-          'Escalou a aplicação Angular/TypeScript para atender mais de 500 clientes, desde pequenas empresas até empresas Fortune 500',
-          'Gerenciei o desenvolvimento e a arquitetura front-end sozinho, entregando aplicações Angular de grande escala enquanto colaborava com a equipe backend na design e integração de APIs',
-          'Aumentou a velocidade de desenvolvimento 40% estabelecendo padrões de codificação, bibliotecas de componentes reutilizáveis e sistema de design',
-          'Reduziu os tempos de carregamento da aplicação 25% por meio de estratégias de busca de dados otimizadas e padrões de integração de APIs',
-          'Mantive 99.9% de disponibilidade na infraestrutura de nuvem Azure por meio de protocolos de monitoramento e recuperação de desastres'
+        "description": "Liderei a arquitetura e o desenvolvimento front-end de uma plataforma SaaS de marketing por e-mail, automação de marketing e API de e-mail que escalou para atender mais de 500 clientes, incluindo empresas Fortune 500.",
+        "achievements": [
+          "Desenvolvi a arquitetura e o front-end da aplicação Angular/TypeScript desde o protótipo até a produção.",
+          "Reduzi os tempos de carregamento da aplicação em 25% e aumentei a velocidade de desenvolvimento em 40% por meio de bibliotecas de componentes reutilizáveis e um sistema de design unificado.",
+          "Implementei gerenciamento de estado escalável com RxJS para fluxo de dados eficiente e atualizações em tempo real.",
+          "Desenvolvi aplicativos móveis multiplataforma usando .NET MAUI e Blazor.",
+          "Mantive 99,9% de disponibilidade na infraestrutura de nuvem Azure por meio de automação e monitoramento de sistemas.",
+          "Colaborei com as equipes de backend, produto e design para traduzir requisitos de negócio complexos em soluções seguras e compatíveis com padrões de conformidade empresarial.",
+          "Mentorei desenvolvedores, liderei revisões de código e introduzi padrões que melhoraram a eficiência da equipe e a qualidade do código."
         ]
       }
     },
@@ -50,14 +54,13 @@ export const appSettings = {
         title: 'Front-End Developer',
         company: 'iXfactor Inc.',
         duration: '2015 - 2022',
-        description: 'Delivered enterprise-scale front-end solutions for Fortune 500 financial services and travel companies, managing both application development and cloud infrastructure.',
+        description: 'Built and modernized enterprise front-end applications and maintained a multi-tenant email marketing platform used by clients across various industries.',
         achievements: [
-          'Built mission-critical applications for J.P. Morgan Chase, Visa, MasterCard, Citi, Air Canada, and Discover, meeting stringent performance, security, and compliance requirements',
-          'Maintained and enhanced large-scale ASP.NET front-end ensuring stability and long-term maintainability for high-traffic financial applications',
+          'Delivered enterprise-scale front-end solutions for J.P. Morgan Chase, Visa, MasterCard, Citi, Air Canada, and Discover.',
+          'Maintained and enhanced a multi-tenant ASP.NET email marketing platform serving hundreds of customers across diverse industries.',
           'Designed and integrated Angular modules into legacy ASP.NET environment, modernizing user experience while maintaining system stability',
-          'Created drag-and-drop email builder with complex HTML generation and custom reporting dashboards for enterprise clients',
-          'Contributed heavily to the migration from physical data center to Microsoft Azure, improving scalability and operational efficiency',
-          'Managed Plesk web hosting server handling deployment, maintenance, and troubleshooting for production applications'
+          'Built advanced UIs including a drag-and-drop email builder and reporting dashboards.',
+          'Supported Azure cloud migration and managed Plesk-based hosting and production environments.'
         ]
       },
       pt: {
@@ -65,16 +68,14 @@ export const appSettings = {
         title: 'Desenvolvedor Front-End',
         company: 'iXfactor Inc.',
         duration: '2015 - 2022',
-        description: 'Desenvolvi e mantenho soluções de front-end de grande escala para empresas Fortune 500 de serviços financeiros e viagens, gerenciando o desenvolvimento de aplicações e a infraestrutura de nuvem.',
+        description: 'Desenvolvi e modernizei aplicações front-end corporativas e mantive uma plataforma de marketing por e-mail multi-tenant utilizada por clientes de diversos setores.',
         achievements: [
-          'Construí aplicações críticas para J.P. Morgan Chase, Visa, MasterCard, Citi, Air Canada, e Discover, atendendo aos requisitos de desempenho, segurança e conformidade rigorosos',
-          'Mantive e otimizei o front-end de grande escala ASP.NET, garantindo estabilidade e manutenibilidade a longo prazo para aplicações financeiras de alto tráfego',
-          'Projetei e integrei módulos Angular em ambiente legado ASP.NET, modernizando a experiência do usuário mantendo a estabilidade do sistema',
-          'Criei construtor de emails com geração de HTML complexa e dashboards de relatórios personalizados para clientes corporativos',
-          'Contribuí para a migração do data center físico para Microsoft Azure, melhorando a escalabilidade e a eficiência operacional',
-          'Gerenciei o servidor de hospedagem web Plesk, lidando com o deployment, manutenção e troubleshooting para aplicações de produção'
+          'Entreguei soluções front-end em escala corporativa para J.P. Morgan Chase, Visa, MasterCard, Citi, Air Canada e Discover.',
+          'Mantive e aprimorei uma plataforma de marketing por e-mail multi-tenant em ASP.NET, atendendo centenas de clientes em diferentes segmentos.',
+          'Projetei e integrei módulos Angular em um ambiente legado ASP.NET, modernizando a experiência do usuário sem comprometer a estabilidade do sistema.',
+          'Desenvolvi interfaces avançadas, incluindo um construtor de e-mails com recurso de arrastar e soltar e painéis de relatórios interativos.',
+          'Dei suporte à migração para a nuvem Azure e gerenciei ambientes de hospedagem e produção baseados em Plesk.'
         ]
-
       }
     }
   ],
@@ -136,7 +137,7 @@ export const appSettings = {
         image: './assets/images/projects/tarvent-zapier.png',
         title: 'Zapier Integration',
         description: 'This integration was built to provide users a way to interact with Tarvent using Zapier.',
-        technologies: ['Zapier','JavaScript', 'GraphQL'],
+        technologies: ['Zapier', 'JavaScript', 'GraphQL'],
         links: [
           {
             icon: 'lni lni-globe-1',
@@ -148,7 +149,7 @@ export const appSettings = {
         image: './assets/images/projects/tarvent-zapier.png',
         title: 'Integração Zapier',
         description: 'Esta integração foi construída para fornecer aos usuários uma forma de interagir com Tarvent usando Zapier.',
-        technologies: ['Zapier','JavaScript', 'GraphQL'],
+        technologies: ['Zapier', 'JavaScript', 'GraphQL'],
         links: [
           {
             icon: 'lni lni-globe-1',
@@ -162,7 +163,7 @@ export const appSettings = {
         image: './assets/images/projects/tarvent-activepieces.png',
         title: 'Activepieces Integration',
         description: 'This integration was built to provide users a way to interact with Tarvent using Activepieces.',
-        technologies: ['Activepieces','TypeScript', 'GraphQL'],
+        technologies: ['Activepieces', 'TypeScript', 'GraphQL'],
         links: [
           {
             icon: 'lni lni-globe-1',
@@ -178,7 +179,7 @@ export const appSettings = {
         image: './assets/images/projects/tarvent-activepieces.png',
         title: 'Integração Activepieces',
         description: 'Esta integração foi construída para fornecer aos usuários uma forma de interagir com Tarvent usando Activepieces.',
-        technologies: ['Activepieces','TypeScript', 'GraphQL'],
+        technologies: ['Activepieces', 'TypeScript', 'GraphQL'],
         links: [
           {
             icon: 'lni lni-globe-1',

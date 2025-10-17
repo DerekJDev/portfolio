@@ -10,7 +10,7 @@
   "hero": {
     "badge": "Disponível para Trabalho",
     "title": "Olá, eu sou Derek Johnson",
-    "subtitle": "Arquiteto Front-End e Co-Fundador | Construindo experiências web intuitivas e poderosas",
+    "subtitle": "Engenheiro Front-End & Arquiteto | Construindo experiências web intuitivas e poderosas",
     "cta": {
       "viewMyWork": "Ver Meu Trabalho",
       "resume": "Baixar Currículo"
@@ -55,23 +55,6 @@
     "subtitle": "Uma jornada de crescimento, inovação e entrega de experiências excepcionais ao usuário",
     "more": "mais...",
     "less": "menos...",
-    "current": {
-      "title": "Arquiteto Front-End e Co-Fundador",
-      "company": "Tech Solutions Inc.",
-      "duration": "2022 - Presente",
-      "description": "Liderando decisões de arquitetura front-end e co-fundando uma empresa de soluções tecnológicas focada em aplicações web modernas.",
-      "achievement1": "Arquitetou e desenvolveu aplicações Angular escaláveis atendendo mais de 10.000 usuários",
-      "achievement2": "Implementou práticas modernas de desenvolvimento incluindo pipelines CI/CD e testes automatizados",
-      "achievement3": "Mentorou desenvolvedores júnior e estabeleceu padrões de codificação e melhores práticas"
-    },
-    "previous": {
-      "title": "Desenvolvedor Front-End",
-      "company": "Digital Agency Co.",
-      "duration": "2020 - 2022",
-      "description": "Desenvolveu aplicações web responsivas e colaborou com equipes de design para criar interfaces envolventes.",
-      "achievement1": "Construiu aplicações web responsivas usando Angular, TypeScript e frameworks CSS modernos",
-      "achievement2": "Otimizou a performance das aplicações resultando em 40% de tempos de carregamento mais rápidos"
-    }
   },
   "projects": {
     "title": "Projetos em Destaque",
@@ -98,6 +81,8 @@
     "readyToWork": "Pronto para trabalharmos juntos?",
     "letsDiscuss": "Vamos discutir seu próximo projeto e trazer suas ideias à vida com tecnologias web modernas.",
     "startConversation": "Iniciar uma Conversa",
+    "email": "Email",
+    "phone": "Telefone",
     "location": "Localização",
     "followMe": "Siga-me",
     "downloadResume": "Baixar Currículo",

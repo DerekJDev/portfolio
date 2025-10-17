@@ -10,7 +10,7 @@
   "hero": {
     "badge": "Available for Work",
     "title": "Hi, I'm Derek Johnson",
-    "subtitle": "Front-End Architect & Co-Founder | Building intuitive and powerful web experiences",
+    "subtitle": "Front-End Engineer & Architect | Building intuitive and powerful web experiences",
     "cta": {
       "viewMyWork": "View My Work",
       "resume": "Download Resume"
@@ -54,24 +54,7 @@
     "title": "Professional Experience",
     "subtitle": "A journey of growth, innovation, and delivering exceptional user experiences",
     "more": "more...",
-    "less": "less...",
-    "current": {
-      "title": "Front-End Architect & Co-Founder",
-      "company": "Tech Solutions Inc.",
-      "duration": "2022 - Present",
-      "description": "Leading front-end architecture decisions and co-founding a technology solutions company focused on modern web applications.",
-      "achievement1": "Architected and developed scalable Angular applications serving 10,000+ users",
-      "achievement2": "Implemented modern development practices including CI/CD pipelines and automated testing",
-      "achievement3": "Mentored junior developers and established coding standards and best practices"
-    },
-    "previous": {
-      "title": "Front-End Developer",
-      "company": "Digital Agency Co.",
-      "duration": "2020 - 2022",
-      "description": "Developed responsive web applications and collaborated with design teams to create engaging user interfaces.",
-      "achievement1": "Built responsive web applications using Angular, TypeScript, and modern CSS frameworks",
-      "achievement2": "Optimized application performance resulting in 40% faster load times"
-    }
+    "less": "less..."
   },
   "projects": {
     "title": "Featured Projects",
@@ -98,6 +81,8 @@
     "readyToWork": "Ready to work together?",
     "letsDiscuss": "Let's discuss your next project and bring your ideas to life with modern web technologies.",
     "startConversation": "Start a Conversation",
+    "email": "Email",
+    "phone": "Phone",
     "location": "Location",
     "followMe": "Follow Me",
     "downloadResume": "Download Resume",
