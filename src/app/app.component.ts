@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ThemeService } from '../core/theme.service';
 import { LanguageService } from '../core/language.service';
@@ -11,12 +11,11 @@ import * as utils from '../core/utils';
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
     TranslateModule,
     ThemeSwitcherComponent,
     LanguageSwitcherComponent,
     SocialLinkComponent
-  ],
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

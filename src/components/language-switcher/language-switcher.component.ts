@@ -1,5 +1,5 @@
 import { Component, computed, ElementRef, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService, LanguageOption } from '../../core/language.service';
 import { ClickOutsideDirective } from '../../directives/click-outside.directive';
@@ -7,7 +7,7 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
 @Component({
   selector: 'app-language-switcher',
   standalone: true,
-  imports: [CommonModule, TranslateModule, ClickOutsideDirective],
+  imports: [TranslateModule, ClickOutsideDirective],
   template: `
     <div class="relative">
       <button

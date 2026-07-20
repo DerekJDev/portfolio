@@ -1,11 +1,11 @@
 import { Component, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ThemeService } from '../../core/theme.service';
 
 @Component({
   selector: 'app-theme-switcher',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   template: `
     <div
       (click)="toggleTheme()"
