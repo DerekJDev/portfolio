@@ -1,7 +1,7 @@
 import {ApplicationConfig, provideZoneChangeDetection} from "@angular/core";
 import {provideTranslateService, provideTranslateLoader} from "@ngx-translate/core";
 import {provideTranslateHttpLoader} from "@ngx-translate/http-loader";
-import {provideHttpClient} from "@angular/common/http";
+import {provideHttpClient, withXhr} from "@angular/common/http";
 import { bootstrapApplication } from '@angular/platform-browser';
 import { App } from './app/app.component';
 import { ThemeService } from './core/theme.service';
@@ -12,7 +12,7 @@ import { injectSpeedInsights } from '@vercel/speed-insights';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideHttpClient(),
+    provideHttpClient(withXhr()),
     provideTranslateService({
       loader: provideTranslateHttpLoader({
         prefix: '/assets/locale/translations.',

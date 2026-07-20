@@ -1,4 +1,4 @@
-import { Component, computed, ElementRef, ViewChild } from '@angular/core';
+import { Component, computed, ElementRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService, LanguageOption } from '../../core/language.service';
@@ -56,6 +56,7 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
       </div>
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./language-switcher.component.css']
 })
 export class LanguageSwitcherComponent {

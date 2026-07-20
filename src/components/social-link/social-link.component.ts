@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 
 @Component({
@@ -16,6 +16,7 @@ import { Component, Input } from '@angular/core';
       <i [class]="icon"></i>
     </a>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social-link.component.css'
 })
 export class SocialLinkComponent {

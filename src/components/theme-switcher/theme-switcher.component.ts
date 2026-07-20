@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
 
 import { ThemeService } from '../../core/theme.service';
 
@@ -28,6 +28,7 @@ import { ThemeService } from '../../core/theme.service';
       ></div>
     </div>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styles: []
 })
 export class ThemeSwitcherComponent {
