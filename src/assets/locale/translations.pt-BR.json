@@ -54,7 +54,7 @@
     "title": "Experiência Profissional",
     "subtitle": "Uma jornada de crescimento, inovação e entrega de experiências excepcionais ao usuário",
     "more": "mais...",
-    "less": "menos...",
+    "less": "menos..."
   },
   "projects": {
     "title": "Projetos em Destaque",
@@ -72,7 +72,8 @@
       "description": "Dashboard interativo de visualização de dados com gráficos e relatórios em tempo real, construído para clientes empresariais rastrearem métricas de negócio."
     },
     "viewCode": "Ver Código",
-    "liveDemo": "Demo ao Vivo"
+    "liveDemo": "Demo ao Vivo",
+    "viewProject": "Ver projeto"
   },
   "contact": {
     "title": "Entre em Contato",
@@ -87,12 +88,28 @@
     "followMe": "Siga-me",
     "downloadResume": "Baixar Currículo",
     "resumeDescription": "Obtenha uma visão detalhada da minha experiência, habilidades e conquistas em formato PDF.",
-    "downloadPDF": "Baixar PDF"
+    "downloadPDF": "Baixar PDF",
+    "locationValue": "Lone Tree, CO"
   },
   "footer": {
-    "rightsReserved": "Todos os direitos reservados."
+    "rightsReserved": "Todos os direitos reservados.",
+    "copyright": "© {{year}} Derek Johnson."
   },
   "language": {
-    "switch": "Trocar Idioma"
+    "switch": "Trocar Idioma",
+    "english": "English",
+    "portuguese": "Português",
+    "usaFlag": "Bandeira dos EUA",
+    "brazilFlag": "Bandeira do Brasil"
+  },
+  "social": {
+    "profile": "Perfil {{platform}}"
+  },
+  "theme": {
+    "toggle": "Alternar tema"
+  },
+  "common": {
+    "logoAlt": "Derek Johnson",
+    "headshotAlt": "Derek Johnson"
   }
 }

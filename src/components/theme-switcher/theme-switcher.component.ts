@@ -1,15 +1,21 @@
 import { Component, computed, ChangeDetectionStrategy } from '@angular/core';
-
+import { TranslateModule } from '@ngx-translate/core';
 import { ThemeService } from '../../core/theme.service';
 
 @Component({
   selector: 'app-theme-switcher',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   template: `
     <div
       (click)="toggleTheme()"
       class="relative w-16 h-8 rounded-3xl bg-slate-300 dark:bg-zinc-700 cursor-pointer transition-colors duration-200 flex items-center justify-between px-2"
+      role="button"
+      tabindex="0"
+      [attr.title]="'theme.toggle' | translate"
+      [attr.aria-label]="'theme.toggle' | translate"
+      (keydown.enter)="toggleTheme()"
+      (keydown.space)="$event.preventDefault(); toggleTheme()"
     >
       <!-- Sun icon for light mode -->
       <i class="lni lni-moon-half-right-5 text-sm transition-opacity duration-200 z-10 pointer-events-none"

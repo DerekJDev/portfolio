@@ -72,7 +72,8 @@
       "description": "Interactive data visualization dashboard with real-time charts and reports, built for enterprise clients to track business metrics."
     },
     "viewCode": "View Code",
-    "liveDemo": "Live Demo"
+    "liveDemo": "Live Demo",
+    "viewProject": "View project"
   },
   "contact": {
     "title": "Get In Touch",
@@ -87,12 +88,28 @@
     "followMe": "Follow Me",
     "downloadResume": "Download Resume",
     "resumeDescription": "Get a detailed overview of my experience, skills, and achievements in PDF format.",
-    "downloadPDF": "Download PDF"
+    "downloadPDF": "Download PDF",
+    "locationValue": "Lone Tree, CO"
   },
   "footer": {
-    "rightsReserved": "All rights reserved."
+    "rightsReserved": "All rights reserved.",
+    "copyright": "© {{year}} Derek Johnson."
   },
   "language": {
-    "switch": "Switch Language"
+    "switch": "Switch Language",
+    "english": "English",
+    "portuguese": "Português",
+    "usaFlag": "USA Flag",
+    "brazilFlag": "Brazil Flag"
+  },
+  "social": {
+    "profile": "{{platform}} profile"
+  },
+  "theme": {
+    "toggle": "Toggle theme"
+  },
+  "common": {
+    "logoAlt": "Derek Johnson",
+    "headshotAlt": "Derek Johnson"
   }
 }

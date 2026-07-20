@@ -18,11 +18,11 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
       >
         <img
           [src]="currentLanguageOption().flag"
-          [alt]="currentLanguageOption().flagAlt"
+          [alt]="currentLanguageOption().flagAltKey | translate"
           class="w-5 h-5 rounded-sm"
         />
         <span class="text-sm font-medium">
-          {{ currentLanguageOption().name }}
+          {{ currentLanguageOption().nameKey | translate }}
         </span>
         <i class="lni lni-chevron-down text-xs text-gray-500 dark:text-gray-400"></i>
       </button>
@@ -42,11 +42,11 @@ import { ClickOutsideDirective } from '../../directives/click-outside.directive'
           >
             <img
               [src]="language.flag"
-              [alt]="language.flagAlt"
+              [alt]="language.flagAltKey | translate"
               class="w-5 h-5 rounded-sm"
             />
             <span class="text-sm font-medium">
-              {{ language.name }}
+              {{ language.nameKey | translate }}
             </span>
             @if (language.code === languageService.currentLanguage) {
               <i class="lni lni-check text-blue-500 dark:text-blue-400 ml-auto"></i>

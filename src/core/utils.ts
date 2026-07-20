@@ -1,5 +1,5 @@
 export const appSettings = {
-  openForWork: true,
+  openForWork: false,
   socialLinks: [{
     platform: 'linkedin',
     url: 'https://linkedin.com/in/derek-m-johnson/',
@@ -14,6 +14,36 @@ export const appSettings = {
     icon: 'lni lni-x'
   }],
   experiences: [
+    {
+      en: {
+        image: './assets/images/experiences/forta.png',
+        title: 'Frontend Angular Developer',
+        company: 'Forta Solutions | Agility',
+        duration: '2025 - Present',
+        description: 'Lead frontend architecture for Agility, a cloud-native fintech platform for warehouse lending, collaborating across teams to deliver scalable, accessible solutions for complex financial workflows.',
+        achievements: [
+          'Cross-Stack Architecture & Leadership: Lead frontend architecture and collaborate on cross-functional backend design during epic planning, establishing scalable technical patterns for complex fintech warehouse lending workflows.',
+          'Component Library & Design System: Architected and deployed an application-wide theme system and reusable internal component library utilizing PrimeNG, drastically improving UI consistency and developer velocity across engineering teams.',
+          'Accessibility Compliance: Spearheaded full accessibility overhaul to achieve complete WCAG 2.2 compliance across the platform and customized PrimeNG components to adhere strictly to standards.',
+          'Code Governance & Quality: Serve as the mandatory code reviewer for all production-bound pull requests, maintaining strict standards for performance, security, and maintainability.',
+          'Technical Refinement & Design Alignment: Lead technical refinement sessions and partner closely with UI/UX design teams to translate complex financial workflows into intuitive, buildable technical specs.'
+        ]
+      },
+      pt: {
+        image: './assets/images/experiences/forta.png',
+        title: 'Desenvolvedor Front-End Angular',
+        company: 'Forta Solutions | Agility',
+        duration: '2025 - Presente',
+        description: 'Lidero a arquitetura front-end do Agility, uma plataforma fintech cloud-native para warehouse lending, colaborando com equipes multidisciplinares para entregar soluções escaláveis e acessíveis para fluxos financeiros complexos.',
+        achievements: [
+          'Arquitetura Cross-Stack & Liderança: Lidero a arquitetura front-end e colaboro no design backend multifuncional durante o planejamento de épicos, estabelecendo padrões técnicos escaláveis para fluxos complexos de warehouse lending em fintech.',
+          'Biblioteca de Componentes & Design System: Arquitetei e implantei um sistema de temas em toda a aplicação e uma biblioteca interna de componentes reutilizáveis com PrimeNG, melhorando drasticamente a consistência da UI e a velocidade de desenvolvimento entre as equipes de engenharia.',
+          'Conformidade de Acessibilidade: Liderei uma reformulação completa de acessibilidade para alcançar conformidade total com WCAG 2.2 em toda a plataforma e personalizei componentes PrimeNG para aderir estritamente aos padrões.',
+          'Governança de Código & Qualidade: Atuo como revisor de código obrigatório para todos os pull requests destinados à produção, mantendo padrões rigorosos de performance, segurança e manutenibilidade.',
+          'Refinamento Técnico & Alinhamento de Design: Lidero sessões de refinamento técnico e trabalho em estreita parceria com equipes de UI/UX para traduzir fluxos financeiros complexos em especificações técnicas intuitivas e implementáveis.'
+        ]
+      }
+    },
     {
       en: {
         image: './assets/images/experiences/tarvent.png',
@@ -35,7 +65,7 @@ export const appSettings = {
         image: './assets/images/experiences/tarvent.png',
         title: 'Engenheiro Front-End Sênior & Arquiteto',
         company: 'Tarvent Inc.',
-        duration: '2022 - Present',
+        duration: '2022 - Presente',
         "description": "Liderei a arquitetura e o desenvolvimento front-end de uma plataforma SaaS de marketing por e-mail, automação de marketing e API de e-mail que escalou para atender mais de 500 clientes, incluindo empresas Fortune 500.",
         "achievements": [
           "Desenvolvi a arquitetura e o front-end da aplicação Angular/TypeScript desde o protótipo até a produção.",
@@ -121,7 +151,7 @@ export const appSettings = {
       },
       pt: {
         image: './assets/images/projects/tarvent-mobile-app.png',
-        title: 'Tarvent Mobile App',
+        title: 'App Móvel Tarvent',
         description: 'Este aplicativo móvel foi construído para fornecer relatórios e gerenciamento de contatos para a plataforma Tarvent.',
         technologies: ['.NET Maui', 'Blazor', 'Syncfusion Blazor Components', 'GraphQL'],
         links: [
@@ -242,8 +272,8 @@ export const appSettings = {
     }
   ],
   email: 'me@derekjohnson.dev',
-  phone: '+19522288768',
-  phoneDisplay: '(952) 228-8768',
+  phone: '+17206936987',
+  phoneDisplay: '(720) 693-6987',
   location: 'Lone tree, CO',
 };
 export const getCurrentYear = () => {

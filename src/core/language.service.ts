@@ -5,9 +5,9 @@ export type SupportedLanguage = 'en-US' | 'pt-BR';
 
 export interface LanguageOption {
   code: SupportedLanguage;
-  name: string;
+  nameKey: string;
   flag: string;
-  flagAlt: string;
+  flagAltKey: string;
 }
 
 @Injectable({
@@ -21,15 +21,15 @@ export class LanguageService {
   public readonly languages: LanguageOption[] = [
     {
       code: 'en-US',
-      name: 'English',
+      nameKey: 'language.english',
       flag: './assets/images/icons/icons8-usa-48.png',
-      flagAlt: 'USA Flag'
+      flagAltKey: 'language.usaFlag'
     },
     {
       code: 'pt-BR',
-      name: 'Português',
+      nameKey: 'language.portuguese',
       flag: './assets/images/icons/icons8-brazil-48.png',
-      flagAlt: 'Brazil Flag'
+      flagAltKey: 'language.brazilFlag'
     }
   ];
 
