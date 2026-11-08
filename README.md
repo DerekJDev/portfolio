@@ -1,30 +1,32 @@
 # Derek Johnson - Portfolio Website
 
-A modern, responsive portfolio website built with Angular 22, featuring multilingual support, dark/light theme switching, and a comprehensive showcase of professional experience and projects.
+A modern, responsive portfolio website built with Angular 22. It showcases frontend architecture work across fintech and SaaS, plus AI-assisted engineering tooling, with multilingual support and dark/light themes.
+
+**Live site:** [derekjohnson.dev](https://derekjohnson.dev/)
 
 ## Features
 
-- **Multilingual Support**: English (`en-US`) and Portuguese (`pt-BR`) with dynamic language switching via ngx-translate
+- **Multilingual Support**: English (`en-US`) and Portuguese (`pt-BR`) via ngx-translate
 - **Theme Toggle**: Dark and light mode with smooth transitions
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Modern UI/UX**: Clean, professional design with smooth animations
-- **Professional Showcase**: Experience (including Forta Solutions | Agility, Tarvent, and iXfactor), projects, and skills
-- **Interactive Elements**: Expandable achievement sections and smooth scrolling navigation
-- **Social Integration**: Direct links to LinkedIn, GitHub, and X (Twitter)
+- **Responsive Design**: Mobile-first layout with Tailwind CSS
+- **Professional Experience**: Forta Solutions | Agility, Tarvent, and iXfactor
+- **AI-Assisted Engineering**: Dedicated section covering Cursor, Cursor Rules, Claude / Claude Code, MCP, agent skills, multi-agent workflows, and quality guardrails
+- **Projects & Skills**: Product work, tech stack, and an AI & Automation skill group
+- **AEO / SEO Ready**: Static prerender (SSG), Person JSON-LD, `robots.txt`, `sitemap.xml`, and `llms.txt`
 - **Analytics**: Vercel Analytics and Speed Insights
 
 ## Tech Stack
 
 - **Framework**: Angular 22 with standalone components (no NgModules)
-- **Rendering**: Static prerender (SSG) via `@angular/ssr` (`outputMode: "static"`) for AEO/SEO
-- **Routing**: Standalone `provideRouter` + `app.routes.ts` / `app.routes.server.ts`
+- **Rendering**: Static prerender via `@angular/ssr` (`outputMode: "static"`)
+- **Routing**: `provideRouter` + `app.routes.ts` / `app.routes.server.ts`
 - **Styling**: Tailwind CSS 4.x with PostCSS
-- **Internationalization**: `@ngx-translate/core` with a build-time static JSON loader
+- **Internationalization**: `@ngx-translate/core` with a build-time static JSON loader (`static-translate.loader.ts`)
 - **Icons**: LineIcons
 - **TypeScript**: 6.x
 - **Testing**: Vitest via Angular unit-test builder
 - **Build Tool**: Angular CLI 22 / `@angular/build`
-- **Deployment**: Vercel-ready static output
+- **Deployment**: Static output on Vercel (`dist/my-portfolio/browser`)
 
 ## Prerequisites
 
@@ -49,79 +51,95 @@ npm install
 npm start
 ```
 
-4. Navigate to `http://localhost:4200/` in your browser
+4. Open `http://localhost:4200/`
 
 ## Project Structure
 
 ```
 src/
-├── app/                       # Application root
-│   ├── app.component.*        # Main portfolio page
-│   └── app.routes.ts          # Standalone route config
-├── assets/                    # Static assets
-│   ├── images/                # Logos, headshot, project images
-│   │   └── experiences/       # Company logos (Forta, Tarvent, iXfactor)
-│   ├── documents/             # Resume PDF
-│   └── locale/                # translations.en-US.json / translations.pt-BR.json
-├── components/                # Reusable UI components
+├── app/
+│   ├── app.component.*          # Main portfolio page (hero → about → experience → AI → projects → contact)
+│   ├── app.config.ts            # Browser application providers
+│   ├── app.config.server.ts     # Server/prerender providers
+│   ├── app.routes.ts            # Client routes
+│   └── app.routes.server.ts     # RenderMode.Prerender config
+├── assets/
+│   ├── images/                  # Logos, headshot, project images
+│   │   └── experiences/         # Forta, Tarvent, iXfactor logos
+│   ├── documents/               # Resume PDF
+│   └── locale/                  # translations.en-US.json / translations.pt-BR.json
+├── components/
 │   ├── language-switcher/
 │   ├── social-link/
 │   └── theme-switcher/
-├── core/                      # Services and content data
+├── core/
 │   ├── language.service.ts
 │   ├── theme.service.ts
-│   └── utils.ts               # Experiences, projects, contact info
-├── directives/                # Custom Angular directives
-└── main.ts                    # bootstrapApplication + app providers
+│   ├── static-translate.loader.ts
+│   └── utils.ts                 # Experiences, projects, AI capabilities, contact info
+├── directives/
+├── index.html                   # Meta tags + Person JSON-LD
+├── llms.txt                     # LLM / answer-engine summary
+├── robots.txt
+├── sitemap.xml
+├── main.ts                      # Browser bootstrap
+├── main.server.ts               # Prerender bootstrap
+└── server.ts                    # Build-time SSR entry used for prerendering
 ```
 
 ## Customization
 
-### Adding New Languages
+### Content
 
-1. Create a new translation file in `src/assets/locale/` (e.g., `translations.es-ES.json`)
-2. Update `LanguageService` to include the new language code and option keys
-3. Add matching keys to both locale JSON files
+- **Experience / projects / AI capability cards**: `src/core/utils.ts`
+- **UI copy (nav, hero, about, AI section, contact)**: `src/assets/locale/translations.*.json`
+- **Resume PDF**: `src/assets/documents/Derek Johnson - Resume.pdf`
+- **LLM summary**: `src/llms.txt`
 
-### Modifying Content
+### Languages
 
-- **Personal Information**: Update `src/core/utils.ts` for social links and contact info
-- **Experience / Projects**: Modify the `experiences` and `projects` arrays in `utils.ts` (each entry has `en` and `pt` copy)
-- **UI Copy**: Edit `src/assets/locale/translations.*.json`
-- **Styling**: Customize Tailwind classes in component templates and CSS files
-- **Routing**: Add routes in `src/app/app.routes.ts` and register features with `provideRouter` in `main.ts`
+1. Add `src/assets/locale/translations.<locale>.json`
+2. Register the locale in `LanguageService`
+3. Import the JSON in `static-translate.loader.ts` so prerender can bake it in
 
-### Theme Customization
+### Theme
 
-The theme system uses CSS custom properties. Modify values in `src/core/theme.service.ts` to customize colors and styling.
+Theme values live in `src/core/theme.service.ts`.
 
 ## Build & Deployment
 
-### Development Build
+### Development
 ```bash
 npm run build -- --configuration development
 ```
 
-### Production Build
+### Production
 ```bash
 npm run build
 ```
 
-### Preview Production Build
+Production builds prerender `/` into static HTML under `dist/my-portfolio/browser`. Deploy that folder to Vercel (or any static host).
+
+### Local preview
 ```bash
 npm run build
 npx http-server dist/my-portfolio/browser
 ```
 
-Production builds prerender `/` into static HTML under `dist/my-portfolio/browser`. Deploy that folder on Vercel (or any static host). Verify crawlers can see content with:
-
+### Verify prerender / AEO assets
 ```bash
-rg -n "Forta|AI-Assisted" dist/my-portfolio/browser/index.html
+# Local build output
+rg -n "Forta|AI-Assisted|ng-server-context" dist/my-portfolio/browser/index.html
+
+# Live site
+curl -sL https://derekjohnson.dev | rg -n "Forta|AI-Assisted|ng-server-context"
+curl -sI https://derekjohnson.dev/llms.txt
+curl -sI https://derekjohnson.dev/robots.txt
+curl -sI https://derekjohnson.dev/sitemap.xml
 ```
 
 ## Testing
 
-Run unit tests with Vitest:
 ```bash
 npm test
 ```
@@ -147,6 +165,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
+- **Website**: [derekjohnson.dev](https://derekjohnson.dev/)
 - **LinkedIn**: [Derek Johnson](https://linkedin.com/in/derek-m-johnson/)
 - **GitHub**: [DerekJDev](https://github.com/DerekJDev)
 - **X (Twitter)**: [@derekjdev](https://x.com/derekjdev)
