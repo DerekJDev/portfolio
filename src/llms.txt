@@ -1,0 +1,31 @@
+# Derek Johnson
+
+> Derek Johnson is a Front-End Engineer & Architect with 10+ years of experience building Angular and TypeScript applications, primarily in fintech and SaaS. He currently works at Forta Solutions | Agility and focuses on front-end architecture and AI-assisted engineering workflows.
+
+## Identity
+- Name: Derek Johnson
+- Title: Front-End Engineer & Architect
+- Website: https://derekjohnson.dev/
+- Email: me@derekjohnson.dev
+
+## Expertise
+- Angular and TypeScript application architecture
+- Front-end engineering for fintech and SaaS products
+- AI-assisted development: Claude, Claude Code, Cursor, multi-agent workflows
+
+## Experience
+- Forta Solutions | Agility — Dec 2025–Present
+- Tarvent — Jan 2022–Nov 2025
+- iXfactor — Jul 2015–Oct 2022
+
+## AI tooling work
+- Co-architected an MCP (Model Context Protocol) server
+- Authored Cursor rules to standardize AI-assisted development
+- Built GraphQL linting into CI
+- Uses Claude and Claude Code in multi-agent development workflows
+
+## Links
+- [Portfolio](https://derekjohnson.dev/): Overview, experience, and projects
+- [Resume (PDF)](https://derekjohnson.dev/assets/documents/Derek%20Johnson%20-%20Resume.pdf): Full work history
+- [LinkedIn](https://www.linkedin.com/in/derek-m-johnson): Professional profile
+- [GitHub](https://github.com/DerekJDev): Code and projects

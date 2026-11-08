@@ -21,6 +21,7 @@
             <a href="#home" class="nav-link">{{ 'navigation.home' | translate }}</a>
             <a href="#about" class="nav-link">{{ 'navigation.about' | translate }}</a>
             <a href="#experience" class="nav-link">{{ 'navigation.experience' | translate }}</a>
+            <a href="#ai" class="nav-link">{{ 'navigation.ai' | translate }}</a>
             <a href="#projects" class="nav-link">{{ 'navigation.projects' | translate }}</a>
             <a href="#contact" class="nav-link">{{ 'navigation.contact' | translate }}</a>
           </div>
@@ -56,6 +57,8 @@
             'navigation.about' | translate }}</a>
           <a href="#experience" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
             'navigation.experience' | translate }}</a>
+          <a href="#ai" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
+            'navigation.ai' | translate }}</a>
           <a href="#projects" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
             'navigation.projects' | translate }}</a>
           <a href="#contact" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
@@ -193,6 +196,20 @@
                     <span class="skill-tag">ASP.NET</span>
                     <span class="skill-tag">Microsoft Azure</span>
                     <span class="skill-tag">Azure B2C</span>
+                  </div>
+                </div>
+
+                <div class="skill-category">
+                  <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <i class="lni lni-open-ai mr-2 text-purple-500"></i>
+                    {{'about.skills.ai.title' | translate}}
+                  </h4>
+                  <div class="flex flex-wrap gap-3">
+                    <span class="skill-tag">{{'about.skills.ai.cursor' | translate}}</span>
+                    <span class="skill-tag">{{'about.skills.ai.claude' | translate}}</span>
+                    <span class="skill-tag">{{'about.skills.ai.mcp' | translate}}</span>
+                    <span class="skill-tag">{{'about.skills.ai.agents' | translate}}</span>
+                    <span class="skill-tag">{{'about.skills.ai.cicd' | translate}}</span>
                   </div>
                 </div>
 
@@ -342,8 +359,41 @@
       </div>
     </section>
 
+    <!-- AI Experience Section -->
+    <section id="ai" class="py-24 bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            {{ 'ai.title' | translate }}
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6">
+            {{ 'ai.subtitle' | translate }}
+          </p>
+          <p class="text-base text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            {{ 'ai.intro' | translate }}
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          @for (capability of utils.appSettings.aiCapabilities; track capability.id) {
+          <div class="ai-capability-card">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center mb-4">
+              <i class="{{ capability.icon }} text-xl text-blue-600 dark:text-blue-400"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+              {{ ('ai.items.' + capability.id + '.title') | translate }}
+            </h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              {{ ('ai.items.' + capability.id + '.description') | translate }}
+            </p>
+          </div>
+          }
+        </div>
+      </div>
+    </section>
+
     <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-gray-50 dark:bg-gray-800">
+    <section id="projects" class="py-24 bg-white dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">

@@ -16,9 +16,10 @@ A modern, responsive portfolio website built with Angular 22, featuring multilin
 ## Tech Stack
 
 - **Framework**: Angular 22 with standalone components (no NgModules)
-- **Routing**: Standalone `provideRouter` + `app.routes.ts`
+- **Rendering**: Static prerender (SSG) via `@angular/ssr` (`outputMode: "static"`) for AEO/SEO
+- **Routing**: Standalone `provideRouter` + `app.routes.ts` / `app.routes.server.ts`
 - **Styling**: Tailwind CSS 4.x with PostCSS
-- **Internationalization**: `@ngx-translate/core` + `@ngx-translate/http-loader`
+- **Internationalization**: `@ngx-translate/core` with a build-time static JSON loader
 - **Icons**: LineIcons
 - **TypeScript**: 6.x
 - **Testing**: Vitest via Angular unit-test builder
@@ -110,6 +111,12 @@ npm run build
 ```bash
 npm run build
 npx http-server dist/my-portfolio/browser
+```
+
+Production builds prerender `/` into static HTML under `dist/my-portfolio/browser`. Deploy that folder on Vercel (or any static host). Verify crawlers can see content with:
+
+```bash
+rg -n "Forta|AI-Assisted" dist/my-portfolio/browser/index.html
 ```
 
 ## Testing

@@ -32,9 +32,7 @@ export class App implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Apply initial theme
     this.themeService.setTheme(this.themeService.isDarkMode);
-    console.log(this.languageService.currentLanguage);
   }
 
   toggleMobileMenu(): void {

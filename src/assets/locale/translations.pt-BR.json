@@ -3,6 +3,7 @@
     "home": "Início",
     "about": "Sobre",
     "experience": "Experiência",
+    "ai": "IA",
     "projects": "Projetos",
     "contact": "Contato",
     "openMainMenu": "Abrir menu principal"
@@ -10,7 +11,7 @@
   "hero": {
     "badge": "Disponível para Trabalho",
     "title": "Olá, eu sou Derek Johnson",
-    "subtitle": "Engenheiro Front-End & Arquiteto | Construindo experiências web intuitivas e poderosas",
+    "subtitle": "Engenheiro Front-End & Arquiteto | Construindo plataformas web escaláveis e as ferramentas de IA que ajudam equipes a entregá-las",
     "cta": {
       "viewMyWork": "Ver Meu Trabalho",
       "resume": "Baixar Currículo"
@@ -18,7 +19,7 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "subtitle": "Desenvolvedor front-end apaixonado com expertise em Angular, TypeScript e tecnologias web modernas. Especializo-me em criar aplicações amigáveis e performáticas que oferecem experiências excepcionais ao usuário.",
+    "subtitle": "Engenheiro e arquiteto front-end com mais de 10 anos construindo aplicações corporativas em Angular e TypeScript nos setores de fintech e SaaS, com foco em performance, manutenibilidade e ótimas experiências de usuário. Recentemente também lidero o desenvolvimento assistido por IA na minha equipe, criando servidores MCP, regras compartilhadas e automações de CI que tornam as ferramentas de IA confiáveis em bases de código de produção.",
     "skills": {
       "title": "Habilidades Técnicas",
       "frontend": {
@@ -27,12 +28,20 @@
       "backend": {
         "title": "Backend & Ferramentas"
       },
+      "ai": {
+        "title": "IA & Automação",
+        "cursor": "Cursor & Cursor Rules",
+        "claude": "Claude / Claude Code",
+        "mcp": "MCP (Model Context Protocol)",
+        "agents": "Agent Skills & Fluxos Multiagentes",
+        "cicd": "Automação de Qualidade em CI/CD"
+      },
       "outsideOfWork": {
         "title": "Fora do Trabalho",
         "soccer": "Futebol",
         "skiing": "Esqui",
         "mountainBiking": "Bicicleta de Montanha",
-        "marathonRunner": "2X Corredor de Maratona... (Correr é chato 🙃)",
+        "marathonRunner": "2X Corredor de Maratona",
         "guitar": "Violão",
         "bilingual": "Bilingue (Inglês e Português)"
       }
@@ -56,6 +65,45 @@
     "more": "mais...",
     "less": "menos..."
   },
+  "ai": {
+    "title": "Engenharia Assistida por IA",
+    "subtitle": "Construindo as ferramentas, o contexto e os mecanismos de controle que tornam a IA uma parte confiável do fluxo de desenvolvimento.",
+    "intro": "Trato a IA como infraestrutura de engenharia, não como novidade. Meu foco é a camada entre os modelos e as bases de código reais: fornecer o contexto certo aos assistentes por meio de regras, skills e servidores MCP, combinar agentes em fluxos de trabalho e manter os resultados no mesmo padrão de qualidade do código escrito à mão.",
+    "items": {
+      "cursor": {
+        "title": "Cursor",
+        "description": "Desenvolvimento assistido por IA no Cursor no dia a dia, do planejamento à implementação, refatoração e depuração em bases de código Angular/TypeScript."
+      },
+      "cursor-rules": {
+        "title": "Regras do Cursor",
+        "description": "Criei regras para toda a equipe que registram a arquitetura, as convenções de componentes e os padrões de acessibilidade, para que o código gerado por IA siga a forma como a equipe realmente desenvolve."
+      },
+      "claude": {
+        "title": "Claude & Claude Code",
+        "description": "Uso do Claude para raciocínio arquitetural e escrita técnica, e do Claude Code para trabalho agêntico no terminal envolvendo vários arquivos."
+      },
+      "mcp": {
+        "title": "Desenvolvimento de Servidores MCP",
+        "description": "Ajudei a arquitetar um servidor Model Context Protocol que expõe contexto e ferramentas internas aos assistentes de IA por meio de uma interface padronizada."
+      },
+      "skills": {
+        "title": "Skills para Agentes",
+        "description": "Criei skills reutilizáveis que reúnem conhecimento de domínio e procedimentos passo a passo, para que os agentes executem tarefas recorrentes de forma consistente."
+      },
+      "multi-agent": {
+        "title": "Fluxos Multiagentes",
+        "description": "Projetei fluxos em que agentes especializados dividem pesquisa, implementação e revisão, repassando os resultados entre si."
+      },
+      "guardrails": {
+        "title": "Controles de Qualidade para IA",
+        "description": "Combino a velocidade da IA com verificações automatizadas, como o lint do schema GraphQL no CI, e revisão de código humana, para que mudanças geradas por IA atendam aos padrões de produção."
+      },
+      "enablement": {
+        "title": "Capacitação de Desenvolvedores",
+        "description": "Ajudo a equipe a adotar ferramentas de IA com configurações, convenções e fluxos de trabalho compartilhados, em vez de cada desenvolvedor experimentar sozinho."
+      }
+    }
+  },
   "projects": {
     "title": "Projetos em Destaque",
     "subtitle": "Uma vitrine do meu trabalho recente e expertise técnica",
@@ -77,10 +125,10 @@
   },
   "contact": {
     "title": "Entre em Contato",
-    "subtitle": "Pronto para trabalharmos juntos? Vamos discutir seu próximo projeto",
+    "subtitle": "Aberto a posições sênior e staff em front-end. Vamos conversar.",
     "getInTouch": "Informações de Contato",
     "readyToWork": "Pronto para trabalharmos juntos?",
-    "letsDiscuss": "Vamos discutir seu próximo projeto e trazer suas ideias à vida com tecnologias web modernas.",
+    "letsDiscuss": "Seja para arquitetar uma plataforma front-end ou ajudar uma equipe a adotar ferramentas de IA com responsabilidade, adoraria saber o que você está construindo.",
     "startConversation": "Iniciar uma Conversa",
     "email": "Email",
     "phone": "Telefone",

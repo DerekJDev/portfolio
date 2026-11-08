@@ -19,12 +19,14 @@ export const appSettings = {
         image: './assets/images/experiences/forta.png',
         title: 'Frontend Angular Developer',
         company: 'Forta Solutions | Agility',
-        duration: '2025 - Present',
-        description: 'Lead frontend architecture for Agility, a cloud-native fintech platform for warehouse lending, collaborating across teams to deliver scalable, accessible solutions for complex financial workflows.',
+        duration: 'Dec 2025 - Present',
+        description: 'Lead frontend architecture for Agility, a cloud-native fintech platform for warehouse lending, collaborating across teams to deliver scalable, accessible solutions for complex financial workflows, while driving the team\'s adoption of AI-assisted development tooling.',
         achievements: [
           'Cross-Stack Architecture & Leadership: Lead frontend architecture and collaborate on cross-functional backend design during epic planning, establishing scalable technical patterns for complex fintech warehouse lending workflows.',
           'Component Library & Design System: Architected and deployed an application-wide theme system and reusable internal component library utilizing PrimeNG, drastically improving UI consistency and developer velocity across engineering teams.',
           'Accessibility Compliance: Spearheaded full accessibility overhaul to achieve complete WCAG 2.2 compliance across the platform and customized PrimeNG components to adhere strictly to standards.',
+          'AI Developer Tooling & Enablement: Co-architected the team\'s Model Context Protocol (MCP) server and authored shared Cursor rules adopted by all developers, giving AI coding assistants project-specific context and conventions so generated code stays consistent with established architecture and standards.',
+          'API Governance & CI/CD Automation: Built a CI/CD pipeline task that lints the GraphQL API schema against best-practice rules, catching naming, structure, and design issues before merge and enforcing consistent API contracts across frontend and backend teams.',
           'Code Governance & Quality: Serve as the mandatory code reviewer for all production-bound pull requests, maintaining strict standards for performance, security, and maintainability.',
           'Technical Refinement & Design Alignment: Lead technical refinement sessions and partner closely with UI/UX design teams to translate complex financial workflows into intuitive, buildable technical specs.'
         ]
@@ -33,12 +35,14 @@ export const appSettings = {
         image: './assets/images/experiences/forta.png',
         title: 'Desenvolvedor Front-End Angular',
         company: 'Forta Solutions | Agility',
-        duration: '2025 - Presente',
-        description: 'Lidero a arquitetura front-end do Agility, uma plataforma fintech cloud-native para warehouse lending, colaborando com equipes multidisciplinares para entregar soluções escaláveis e acessíveis para fluxos financeiros complexos.',
+        duration: 'Dez 2025 - Presente',
+        description: 'Lidero a arquitetura front-end do Agility, uma plataforma fintech cloud-native para warehouse lending, colaborando com equipes multidisciplinares para entregar soluções escaláveis e acessíveis para fluxos financeiros complexos, além de impulsionar a adoção de ferramentas de desenvolvimento assistido por IA na equipe.',
         achievements: [
           'Arquitetura Cross-Stack & Liderança: Lidero a arquitetura front-end e colaboro no design backend multifuncional durante o planejamento de épicos, estabelecendo padrões técnicos escaláveis para fluxos complexos de warehouse lending em fintech.',
           'Biblioteca de Componentes & Design System: Arquitetei e implantei um sistema de temas em toda a aplicação e uma biblioteca interna de componentes reutilizáveis com PrimeNG, melhorando drasticamente a consistência da UI e a velocidade de desenvolvimento entre as equipes de engenharia.',
           'Conformidade de Acessibilidade: Liderei uma reformulação completa de acessibilidade para alcançar conformidade total com WCAG 2.2 em toda a plataforma e personalizei componentes PrimeNG para aderir estritamente aos padrões.',
+          'Ferramentas de IA & Capacitação de Desenvolvedores: Co-arquitetei o servidor MCP (Model Context Protocol) da equipe e criei regras compartilhadas do Cursor adotadas por todos os desenvolvedores, fornecendo aos assistentes de código com IA o contexto e as convenções do projeto para que o código gerado permaneça consistente com a arquitetura e os padrões estabelecidos.',
+          'Governança de API & Automação de CI/CD: Desenvolvi uma etapa no pipeline de CI/CD que executa lint no schema da API GraphQL com base em boas práticas, identificando problemas de nomenclatura, estrutura e design antes do merge e garantindo contratos de API consistentes entre as equipes de front-end e back-end.',
           'Governança de Código & Qualidade: Atuo como revisor de código obrigatório para todos os pull requests destinados à produção, mantendo padrões rigorosos de performance, segurança e manutenibilidade.',
           'Refinamento Técnico & Alinhamento de Design: Lidero sessões de refinamento técnico e trabalho em estreita parceria com equipes de UI/UX para traduzir fluxos financeiros complexos em especificações técnicas intuitivas e implementáveis.'
         ]
@@ -49,7 +53,7 @@ export const appSettings = {
         image: './assets/images/experiences/tarvent.png',
         title: 'Senior Front-End Engineer & Architect',
         company: 'Tarvent Inc.',
-        duration: '2022 - Present',
+        duration: 'Jan 2022 - Nov 2025',
         description: 'Led front-end architecture for a SaaS platform providing email marketing, marketing automation, and email API solutions. Scaled the product from concept to 500+ clients, including Fortune 500 companies.',
         achievements: [
           'Developed the Angular/TypeScript front-end from prototype to production.',
@@ -65,7 +69,7 @@ export const appSettings = {
         image: './assets/images/experiences/tarvent.png',
         title: 'Engenheiro Front-End Sênior & Arquiteto',
         company: 'Tarvent Inc.',
-        duration: '2022 - Presente',
+        duration: 'Jan 2022 - Nov 2025',
         "description": "Liderei a arquitetura e o desenvolvimento front-end de uma plataforma SaaS de marketing por e-mail, automação de marketing e API de e-mail que escalou para atender mais de 500 clientes, incluindo empresas Fortune 500.",
         "achievements": [
           "Desenvolvi a arquitetura e o front-end da aplicação Angular/TypeScript desde o protótipo até a produção.",
@@ -83,7 +87,7 @@ export const appSettings = {
         image: './assets/images/experiences/ixfactor.png',
         title: 'Front-End Developer',
         company: 'iXfactor Inc.',
-        duration: '2015 - 2022',
+        duration: 'Jul 2015 - Oct 2022',
         description: 'Built and modernized enterprise front-end applications and maintained a multi-tenant email marketing platform used by clients across various industries.',
         achievements: [
           'Delivered enterprise-scale front-end solutions for J.P. Morgan Chase, Visa, MasterCard, Citi, Air Canada, and Discover.',
@@ -97,7 +101,7 @@ export const appSettings = {
         image: './assets/images/experiences/ixfactor.png',
         title: 'Desenvolvedor Front-End',
         company: 'iXfactor Inc.',
-        duration: '2015 - 2022',
+        duration: 'Jul 2015 - Out 2022',
         description: 'Desenvolvi e modernizei aplicações front-end corporativas e mantive uma plataforma de marketing por e-mail multi-tenant utilizada por clientes de diversos setores.',
         achievements: [
           'Entreguei soluções front-end em escala corporativa para J.P. Morgan Chase, Visa, MasterCard, Citi, Air Canada e Discover.',
@@ -270,6 +274,16 @@ export const appSettings = {
         links: []
       }
     }
+  ],
+  aiCapabilities: [
+    { id: 'cursor', icon: 'lni lni-vs-code' },
+    { id: 'cursor-rules', icon: 'lni lni-file-pencil' },
+    { id: 'claude', icon: 'lni lni-open-ai' },
+    { id: 'mcp', icon: 'lni lni-plug-1' },
+    { id: 'skills', icon: 'lni lni-layers-1' },
+    { id: 'multi-agent', icon: 'lni lni-share-2' },
+    { id: 'guardrails', icon: 'lni lni-shield-2-check' },
+    { id: 'enablement', icon: 'lni lni-user-multiple-4' }
   ],
   email: 'me@derekjohnson.dev',
   phone: '+17206936987',

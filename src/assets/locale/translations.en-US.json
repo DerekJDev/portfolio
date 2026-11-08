@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "experience": "Experience",
+    "ai": "AI",
     "projects": "Projects",
     "contact": "Contact",
     "openMainMenu": "Open main menu"
@@ -10,7 +11,7 @@
   "hero": {
     "badge": "Available for Work",
     "title": "Hi, I'm Derek Johnson",
-    "subtitle": "Front-End Engineer & Architect | Building intuitive and powerful web experiences",
+    "subtitle": "Front-End Engineer & Architect | Building scalable web platforms and the AI tooling that helps teams ship them",
     "cta": {
       "viewMyWork": "View My Work",
       "resume": "Download Resume"
@@ -18,7 +19,7 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Passionate front-end developer with expertise in Angular, TypeScript, and modern web technologies. I specialize in creating user-friendly, performant applications that deliver exceptional user experiences.",
+    "subtitle": "Front-end engineer and architect with 10+ years building enterprise Angular and TypeScript applications in fintech and SaaS, focused on performance, maintainability, and great user experiences. Lately I've also been leading AI-assisted development on my team, building the MCP servers, shared rules, and CI automation that make AI tools reliable in production codebases.",
     "skills": {
       "title": "Technical Skills",
       "frontend": {
@@ -27,12 +28,20 @@
       "backend": {
         "title": "Backend & Tools"
       },
+      "ai": {
+        "title": "AI & Automation",
+        "cursor": "Cursor & Cursor Rules",
+        "claude": "Claude / Claude Code",
+        "mcp": "MCP (Model Context Protocol)",
+        "agents": "Agent Skills & Multi-Agent Workflows",
+        "cicd": "CI/CD Quality Automation"
+      },
       "outsideOfWork": {
         "title": "Outside of Work",
         "soccer": "Soccer",
         "skiing": "Skiing",
         "mountainBiking": "Mountain Biking",
-        "marathonRunner": "2X Marathon Runner... (Running sucks 🙃)",
+        "marathonRunner": "2X Marathon Runner",
         "guitar": "Guitar",
         "bilingual": "Bilingual (English and Portuguese)"
       }
@@ -56,6 +65,45 @@
     "more": "more...",
     "less": "less..."
   },
+  "ai": {
+    "title": "AI-Assisted Engineering",
+    "subtitle": "Building the tools, context, and guardrails that make AI a reliable part of the development workflow.",
+    "intro": "I treat AI as engineering infrastructure, not a novelty. My focus is the layer between models and real codebases: giving assistants the right context through rules, skills, and MCP servers, composing agents into workflows, and keeping output to the same quality bar as hand-written code.",
+    "items": {
+      "cursor": {
+        "title": "Cursor",
+        "description": "Daily AI-assisted development in Cursor across planning, implementation, refactoring, and debugging in Angular/TypeScript codebases."
+      },
+      "cursor-rules": {
+        "title": "Cursor Rules",
+        "description": "Authored team-wide rules that encode architecture, component conventions, and accessibility standards so AI output matches how the team actually builds."
+      },
+      "claude": {
+        "title": "Claude & Claude Code",
+        "description": "Using Claude for architecture reasoning and technical writing, and Claude Code for agentic, terminal-driven work across multiple files."
+      },
+      "mcp": {
+        "title": "MCP Server Development",
+        "description": "Helped architect a Model Context Protocol server that exposes internal context and tools to AI assistants through a standard interface."
+      },
+      "skills": {
+        "title": "Agent Skills",
+        "description": "Built reusable skills that package domain knowledge and step-by-step procedures so agents carry out recurring tasks consistently."
+      },
+      "multi-agent": {
+        "title": "Multi-Agent Workflows",
+        "description": "Designed workflows where specialized agents split research, implementation, and review, then hand results to each other."
+      },
+      "guardrails": {
+        "title": "AI-Aware Quality Guardrails",
+        "description": "Pairing AI speed with automated checks such as CI linting of the GraphQL schema and human code review so AI-generated changes meet production standards."
+      },
+      "enablement": {
+        "title": "Developer Enablement",
+        "description": "Helping the team adopt AI tools through shared configuration, conventions, and practical workflows instead of each developer experimenting alone."
+      }
+    }
+  },
   "projects": {
     "title": "Featured Projects",
     "subtitle": "A showcase of my recent work and technical expertise",
@@ -77,10 +125,10 @@
   },
   "contact": {
     "title": "Get In Touch",
-    "subtitle": "Ready to work together? Let's discuss your next project",
+    "subtitle": "Open to senior and staff front-end roles. Let's talk.",
     "getInTouch": "Contact Information",
     "readyToWork": "Ready to work together?",
-    "letsDiscuss": "Let's discuss your next project and bring your ideas to life with modern web technologies.",
+    "letsDiscuss": "Whether it's architecting a front-end platform or helping a team adopt AI tooling responsibly, I'd love to hear what you're building.",
     "startConversation": "Start a Conversation",
     "email": "Email",
     "phone": "Phone",

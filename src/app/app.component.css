@@ -36,6 +36,11 @@
   @apply bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300;
 }
 
+/* AI Capability Cards */
+.ai-capability-card {
+  @apply bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+}
+
 /* Expandable Achievements */
 .achievements-list {
   @apply transition-all duration-300 ease-in-out;
