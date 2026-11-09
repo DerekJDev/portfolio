@@ -276,9 +276,9 @@ export const appSettings = {
     }
   ],
   aiCapabilities: [
-    { id: 'cursor', icon: 'lni lni-vs-code' },
+    { id: 'cursor', icon: 'lni lni-select-cursor-1' },
     { id: 'cursor-rules', icon: 'lni lni-file-pencil' },
-    { id: 'claude', icon: 'lni lni-open-ai' },
+    { id: 'claude', icon: 'lni lni-claude' },
     { id: 'mcp', icon: 'lni lni-plug-1' },
     { id: 'skills', icon: 'lni lni-layers-1' },
     { id: 'multi-agent', icon: 'lni lni-share-2' },

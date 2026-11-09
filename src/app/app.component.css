@@ -31,52 +31,103 @@
   @apply mb-6;
 }
 
+/* Shared card lift — transform + shadow only, 180ms */
+.experience-card,
+.ai-capability-card,
+.project-card,
+.project-card-enhanced {
+  transition: transform 180ms ease-out, box-shadow 180ms ease-out;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .experience-card:hover,
+  .ai-capability-card:hover,
+  .project-card:hover,
+  .project-card-enhanced:hover {
+    transform: translateY(-2px);
+  }
+}
+
 /* Experience Cards */
 .experience-card {
-  @apply bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300;
+  @apply bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700;
+}
+
+@media (hover: hover) {
+  .experience-card:hover {
+    @apply shadow-xl;
+  }
 }
 
 /* AI Capability Cards */
 .ai-capability-card {
-  @apply bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+  @apply bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-md;
 }
 
-/* Expandable Achievements */
+@media (hover: hover) {
+  .ai-capability-card:hover {
+    @apply shadow-xl;
+  }
+}
+
+/* Expandable Achievements — grid 0fr → 1fr avoids layout jump */
+.achievements-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 200ms ease-out;
+}
+
+.achievements-panel.is-expanded {
+  grid-template-rows: 1fr;
+}
+
+.achievements-panel-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
 .achievements-list {
-  @apply transition-all duration-300 ease-in-out;
+  @apply opacity-0;
+  transition: opacity 200ms ease-out;
 }
 
-.achievement-item {
-  @apply transition-all duration-300 ease-in-out;
+.achievements-panel.is-expanded .achievements-list {
+  @apply opacity-100;
 }
 
 .achievement-toggle {
-  @apply transition-all duration-200 ease-in-out;
+  @apply rounded-sm transition-colors duration-200 ease-out;
 }
 
-.achievement-toggle:hover {
-  @apply transform scale-105;
+.achievement-toggle:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
 }
 
 .achievement-arrow {
-  @apply transition-transform duration-200 ease-in-out;
+  @apply transition-transform duration-200 ease-out;
 }
 
 /* Project Cards */
 .project-card {
-  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700;
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    @apply shadow-xl;
+  }
 }
 
 .project-image {
-  @apply transition-transform duration-300;
-}
-
-.project-card:hover .project-image {
-  @apply scale-105;
+  transition: transform 250ms ease-out;
 }
 
 .project-link {
-  @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium transition-colors duration-200 flex items-center;
+  @apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium transition-colors duration-200 flex items-center rounded-sm;
+}
+
+.project-link:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
 }
 
 /* Smooth Scrolling */
@@ -130,10 +181,11 @@ html {
 }
 
 /* Focus States for Accessibility */
-.btn-primary:focus,
-.btn-secondary:focus,
-.nav-link:focus,
-.project-link:focus {
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.nav-link:focus-visible,
+.project-link:focus-visible,
+.project-link-enhanced:focus-visible {
   @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
 }
 
@@ -182,19 +234,28 @@ html {
 
 /* Project Cards Enhanced */
 .project-card-enhanced {
-  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden;
+  @apply bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 overflow-hidden;
+}
+
+@media (hover: hover) {
+  .project-card-enhanced:hover {
+    @apply shadow-2xl;
+  }
 }
 
 .project-image-enhanced {
-  @apply transition-all duration-500;
+  transition: transform 250ms ease-out;
 }
 
-.project-card-enhanced:hover .project-image-enhanced {
-  @apply scale-105;
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .project-card:hover .project-image,
+  .project-card-enhanced:hover .project-image-enhanced {
+    transform: scale(1.03);
+  }
 }
 
 .project-link-enhanced {
-  @apply w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110;
+  @apply w-10 h-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-blue-500 hover:text-white transition-colors duration-200;
 }
 
 .tech-tag-enhanced {
@@ -215,7 +276,11 @@ html {
 }
 
 .social-link-contact {
-  @apply flex flex-col items-center p-4 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-105;
+  @apply flex flex-col items-center p-4 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 hover:text-white transition-colors duration-200;
+}
+
+.social-link-contact:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
 }
 
 .social-link-contact:hover .social-link-text {
