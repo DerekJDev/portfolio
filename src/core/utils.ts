@@ -13,9 +13,9 @@ export const appSettings = {
     {
       "en": {
         "image": "./assets/images/experiences/forta.png",
-        "title": "Frontend Angular Developer",
+        "title": "Front-End Angular Developer",
         "company": "Forta Solutions | Agility",
-        "duration": "Dec 2025 - Present",
+        "duration": "Nov 2025 - Present",
         "scope": "Frontend architecture lead · GraphQL schema design · AI tooling",
         "description": "Lead frontend architecture for Agility, a cloud-native fintech platform for warehouse lending, and work across the stack in epic planning to shape API and backend design for complex financial workflows, while driving the team's adoption of AI-assisted development.",
         "achievements": [
@@ -34,7 +34,7 @@ export const appSettings = {
         "image": "./assets/images/experiences/forta.png",
         "title": "Desenvolvedor Front-End Angular",
         "company": "Forta Solutions | Agility",
-        "duration": "Dez 2025 - Presente",
+        "duration": "Nov 2025 - Presente",
         "scope": "Liderança de arquitetura front-end · Design de schema GraphQL · Ferramentas de IA",
         "description": "Lidero a arquitetura front-end do Agility, uma plataforma fintech cloud-native para warehouse lending, e atuo em toda a stack no planejamento de épicos, ajudando a definir o design de APIs e do back-end para fluxos financeiros complexos, além de impulsionar a adoção de desenvolvimento assistido por IA na equipe.",
         "achievements": [
