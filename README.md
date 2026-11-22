@@ -1,6 +1,6 @@
 # Derek Johnson - Portfolio Website
 
-A modern, responsive portfolio website built with Angular 22. It showcases frontend architecture work across fintech and SaaS, plus AI-assisted engineering tooling, with multilingual support and dark/light themes.
+A modern, responsive portfolio website built with Angular 22. It showcases senior software engineering work across fintech and SaaS (frontend architecture, GraphQL API design, integrations, and production reliability) plus AI-assisted engineering tooling, with multilingual support and dark/light themes.
 
 **Live site:** [derekjohnson.dev](https://derekjohnson.dev/)
 
@@ -10,7 +10,7 @@ A modern, responsive portfolio website built with Angular 22. It showcases front
 - **Theme Toggle**: Dark and light mode with smooth transitions
 - **Responsive Design**: Mobile-first layout with Tailwind CSS
 - **Professional Experience**: Forta Solutions | Agility, Tarvent, and iXfactor
-- **AI-Assisted Engineering**: Dedicated section covering Cursor, Cursor Rules, Claude / Claude Code, MCP, agent skills, multi-agent workflows, and quality guardrails
+- **AI-Assisted Engineering**: Four outcome-focused cards: AI-assisted delivery, MCP server, quality guardrails, and team enablement
 - **Projects & Skills**: Product work, tech stack, and an AI & Automation skill group
 - **AEO / SEO Ready**: Static prerender (SSG), Person JSON-LD, `robots.txt`, `sitemap.xml`, and `llms.txt`
 - **Analytics**: Vercel Analytics and Speed Insights
@@ -58,7 +58,7 @@ npm start
 ```
 src/
 ├── app/
-│   ├── app.component.*          # Main portfolio page (hero → about → experience → AI → projects → contact)
+│   ├── app.component.*          # Main portfolio page (hero → impact → experience → about → AI → projects → contact)
 │   ├── app.config.ts            # Browser application providers
 │   ├── app.config.server.ts     # Server/prerender providers
 │   ├── app.routes.ts            # Client routes
@@ -168,7 +168,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Website**: [derekjohnson.dev](https://derekjohnson.dev/)
 - **LinkedIn**: [Derek Johnson](https://linkedin.com/in/derek-m-johnson/)
 - **GitHub**: [DerekJDev](https://github.com/DerekJDev)
-- **X (Twitter)**: [@derekjdev](https://x.com/derekjdev)
 - **Email**: me@derekjohnson.dev
 
 ## Acknowledgments

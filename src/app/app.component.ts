@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, HostListener } from '@angular/core';
 
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ThemeService } from '../core/theme.service';
@@ -24,6 +24,7 @@ export class App implements OnInit {
   isMobileMenuOpen = false;
   utils = utils;
   expandedAchievements: { [key: number]: boolean } = {};
+  impactStats = ['years', 'clients', 'load', 'velocity', 'uptime'];
 
   constructor(
     private translateService: TranslateService,
@@ -39,8 +40,19 @@ export class App implements OnInit {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
+  @HostListener('document:keydown.escape')
   closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
+  }
+
+  /** Splits "Label: body" so the label can be bolded for skimming. */
+  splitAchievement(text: string): { label: string; body: string } {
+    const i = text.indexOf(': ');
+    return i > 0 && i < 60 ? { label: text.slice(0, i), body: text.slice(i + 2) } : { label: '', body: text };
+  }
+
+  linkLabelKey(icon: string): string {
+    return icon.includes('github') ? 'projects.links.source' : 'projects.links.live';
   }
 
   toggleAchievements(index: number): void {

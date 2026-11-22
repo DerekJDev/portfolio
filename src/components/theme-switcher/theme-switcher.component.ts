@@ -14,21 +14,23 @@ import { ThemeService } from '../../core/theme.service';
       tabindex="0"
       [attr.title]="'theme.toggle' | translate"
       [attr.aria-label]="'theme.toggle' | translate"
+      [attr.aria-pressed]="themeService.isDarkMode"
       (keydown.enter)="toggleTheme()"
       (keydown.space)="$event.preventDefault(); toggleTheme()"
     >
       <!-- Sun icon for light mode -->
-      <i class="lni lni-moon-half-right-5 text-sm transition-opacity duration-200 z-10 pointer-events-none"
+      <i aria-hidden="true" class="lni lni-moon-half-right-5 text-sm transition-opacity duration-200 z-10 pointer-events-none"
          [class.opacity-100]="themeService.isDarkMode"
          [class.opacity-30]="!themeService.isDarkMode"></i>
 
       <!-- Moon icon for dark mode -->
-      <i class="lni lni-sun-1 text-sm transition-opacity duration-200 z-10 pointer-events-none"
+      <i aria-hidden="true" class="lni lni-sun-1 text-sm transition-opacity duration-200 z-10 pointer-events-none"
          [class.opacity-100]="!themeService.isDarkMode"
          [class.opacity-30]="themeService.isDarkMode"></i>
 
       <!-- Background indicator -->
       <div
+        aria-hidden="true"
         [class]="toggleClasses()"
         class="absolute top-1 rounded-full w-6 h-6 bg-white dark:bg-gray-800 transition-all duration-200 shadow-sm hover:scale-110 hover:shadow-md"
       ></div>

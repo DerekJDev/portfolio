@@ -6,24 +6,47 @@
     "ai": "IA",
     "projects": "Projetos",
     "contact": "Contato",
-    "openMainMenu": "Abrir menu principal"
+    "openMainMenu": "Abrir menu principal",
+    "closeMainMenu": "Fechar menu principal"
   },
   "hero": {
     "badge": "Disponível para Trabalho",
     "title": "Olá, eu sou Derek Johnson",
-    "subtitle": "Engenheiro Front-End & Arquiteto | Construindo plataformas web escaláveis e as ferramentas de IA que ajudam equipes a entregá-las",
+    "subtitle": "Engenheiro de Software Sênior | Mais de 10 anos em fintech e SaaS: arquitetura front-end, design de APIs, confiabilidade em produção e engenharia assistida por IA",
     "cta": {
       "viewMyWork": "Ver Meu Trabalho",
       "resume": "Baixar Currículo"
     }
   },
+  "impact": {
+    "years": {
+      "value": "10+",
+      "label": "Anos entregando software em produção"
+    },
+    "clients": {
+      "value": "500+",
+      "label": "Clientes em uma plataforma criada do zero"
+    },
+    "load": {
+      "value": "25%",
+      "label": "Carregamento mais rápido"
+    },
+    "velocity": {
+      "value": "40%",
+      "label": "Mais velocidade de desenvolvimento"
+    },
+    "uptime": {
+      "value": "99,9%",
+      "label": "Disponibilidade com plantão"
+    }
+  },
   "about": {
     "title": "Sobre Mim",
-    "subtitle": "Engenheiro e arquiteto front-end com mais de 10 anos construindo aplicações corporativas em Angular e TypeScript nos setores de fintech e SaaS, com foco em performance, manutenibilidade e ótimas experiências de usuário. Recentemente também lidero o desenvolvimento assistido por IA na minha equipe, criando servidores MCP, regras compartilhadas e automações de CI que tornam as ferramentas de IA confiáveis em bases de código de produção.",
+    "subtitle": "Engenheiro de software sênior com mais de 10 anos construindo software de produção para fintech e SaaS. Minha especialidade é a arquitetura em Angular e TypeScript, e meu trabalho atravessa toda a stack: design de schemas GraphQL, integrações de API desenvolvidas de ponta a ponta e plantão para sistemas em produção. Recentemente lidero o desenvolvimento assistido por IA na minha equipe, co-arquitetando nosso servidor MCP e criando as regras compartilhadas e automações de CI que tornam as ferramentas de IA confiáveis em bases de código de produção.",
     "skills": {
       "title": "Habilidades Técnicas",
       "frontend": {
-        "title": "Desenvolvimento Front-End"
+        "title": "Front-End & Mobile"
       },
       "backend": {
         "title": "Backend & Ferramentas"
@@ -44,24 +67,23 @@
         "marathonRunner": "2X Corredor de Maratona",
         "guitar": "Violão",
         "bilingual": "Bilingue (Inglês e Português)"
+      },
+      "analytics": {
+        "title": "Analytics & Experimentação",
+        "ab": "Testes A/B"
       }
     },
     "experience": {
       "title": "Experiência Profissional",
-      "description": "Com mais de 10 anos de experiência em desenvolvimento front-end, entreguei com sucesso inúmeros projetos, desde sites de pequenas empresas até aplicações empresariais de grande escala.",
-      "point1": "Lidei o desenvolvimento de aplicações Angular complexas atendendo milhares de usuários",
-      "point2": "Implementei designs responsivos usando frameworks CSS modernos e técnicas avançadas",
-      "point3": "Colaborei com equipes multifuncionais para entregar soluções de software de alta qualidade"
-    },
-    "quote": {
-      "title": "Citação Favorita",
-      "text": "Design não é apenas o que parece e se sente. Design é como funciona.",
-      "author": "Steve Jobs"
+      "description": "Em mais de 10 anos, levei produtos do protótipo à produção, de dashboards corporativos para grandes instituições financeiras a uma plataforma SaaS que atende mais de 500 clientes.",
+      "point1": "Levei a Tarvent do conceito a mais de 500 clientes, incluindo empresas Fortune 500",
+      "point2": "Ajudei a arquitetar schemas GraphQL e a garantir contratos de API no CI entre as equipes de front-end e back-end",
+      "point3": "Plantão para sistemas em produção, usando alertas do Azure Monitor, health checks e autoescalonamento para manter 99,9% de disponibilidade"
     }
   },
   "experience": {
     "title": "Experiência Profissional",
-    "subtitle": "Uma jornada de crescimento, inovação e entrega de experiências excepcionais ao usuário",
+    "subtitle": "Mais de uma década entregando, escalando e elevando o padrão de qualidade das equipes ao meu redor",
     "more": "mais...",
     "less": "menos..."
   },
@@ -70,65 +92,48 @@
     "subtitle": "Construindo as ferramentas, o contexto e os mecanismos de controle que tornam a IA uma parte confiável do fluxo de desenvolvimento.",
     "intro": "Trato a IA como infraestrutura de engenharia, não como novidade. Meu foco é a camada entre os modelos e as bases de código reais: fornecer o contexto certo aos assistentes por meio de regras, skills e servidores MCP, combinar agentes em fluxos de trabalho e manter os resultados no mesmo padrão de qualidade do código escrito à mão.",
     "items": {
-      "cursor": {
-        "title": "Cursor",
-        "description": "Desenvolvimento assistido por IA no Cursor no dia a dia, do planejamento à implementação, refatoração e depuração em bases de código Angular/TypeScript."
-      },
-      "cursor-rules": {
-        "title": "Regras do Cursor",
-        "description": "Criei regras para toda a equipe que registram a arquitetura, as convenções de componentes e os padrões de acessibilidade, para que o código gerado por IA siga a forma como a equipe realmente desenvolve."
-      },
-      "claude": {
-        "title": "Claude & Claude Code",
-        "description": "Uso do Claude para raciocínio arquitetural e escrita técnica, e do Claude Code para trabalho agêntico no terminal envolvendo vários arquivos."
+      "delivery": {
+        "title": "Entrega Assistida por IA",
+        "description": "Uso diário do Claude Code e do Cursor no planejamento, implementação, refatoração e depuração, com agent skills e fluxos multiagentes para tarefas recorrentes."
       },
       "mcp": {
-        "title": "Desenvolvimento de Servidores MCP",
-        "description": "Ajudei a arquitetar um servidor Model Context Protocol que expõe contexto e ferramentas internas aos assistentes de IA por meio de uma interface padronizada."
-      },
-      "skills": {
-        "title": "Skills para Agentes",
-        "description": "Criei skills reutilizáveis que reúnem conhecimento de domínio e procedimentos passo a passo, para que os agentes executem tarefas recorrentes de forma consistente."
-      },
-      "multi-agent": {
-        "title": "Fluxos Multiagentes",
-        "description": "Projetei fluxos em que agentes especializados dividem pesquisa, implementação e revisão, repassando os resultados entre si."
+        "title": "Servidor MCP",
+        "description": "Co-arquitetei o servidor Model Context Protocol da equipe e construí sua prova de conceito em TypeScript, fornecendo aos assistentes de IA contexto e ferramentas internas por meio de uma interface padronizada."
       },
       "guardrails": {
-        "title": "Controles de Qualidade para IA",
-        "description": "Combino a velocidade da IA com verificações automatizadas, como o lint do schema GraphQL no CI, e revisão de código humana, para que mudanças geradas por IA atendam aos padrões de produção."
+        "title": "Controles de Qualidade",
+        "description": "Combino a velocidade da IA com verificações determinísticas: uma etapa de CI que executa lint no schema GraphQL antes do merge, além de revisão humana obrigatória de todo pull request destinado à produção."
       },
       "enablement": {
-        "title": "Capacitação de Desenvolvedores",
-        "description": "Ajudo a equipe a adotar ferramentas de IA com configurações, convenções e fluxos de trabalho compartilhados, em vez de cada desenvolvedor experimentar sozinho."
+        "title": "Capacitação da Equipe",
+        "description": "Criei as regras compartilhadas do Cursor que todos os desenvolvedores da equipe usam, registrando convenções de arquitetura, componentes e acessibilidade para que o código gerado por IA siga a forma como a equipe desenvolve."
       }
     }
   },
   "projects": {
     "title": "Projetos em Destaque",
     "subtitle": "Uma vitrine do meu trabalho recente e expertise técnica",
-    "project1": {
-      "title": "Plataforma E-Commerce",
-      "description": "Uma plataforma de e-commerce completa construída com Angular, apresentando gerenciamento de estoque em tempo real, processamento de pagamentos e painel administrativo."
-    },
-    "project2": {
-      "title": "App de Banco Mobile",
-      "description": "Aplicação bancária móvel multiplataforma desenvolvida com Angular e Ionic, fornecendo serviços financeiros seguros aos clientes."
-    },
-    "project3": {
-      "title": "Dashboard de Analytics",
-      "description": "Dashboard interativo de visualização de dados com gráficos e relatórios em tempo real, construído para clientes empresariais rastrearem métricas de negócio."
-    },
     "viewCode": "Ver Código",
     "liveDemo": "Demo ao Vivo",
-    "viewProject": "Ver projeto"
+    "viewProject": "Ver projeto",
+    "architectureTitle": "Como os sistemas se conectam",
+    "architectureSubtitle": "O que desenvolvi, o que projetei em conjunto e com o que se conecta.",
+    "legend": {
+      "built": "Desenvolvi",
+      "contributed": "Projetei em conjunto ou contribuí",
+      "external": "Terceiros"
+    },
+    "links": {
+      "live": "Ao vivo",
+      "source": "Código"
+    }
   },
   "contact": {
     "title": "Entre em Contato",
-    "subtitle": "Aberto a posições sênior e staff em front-end. Vamos conversar.",
+    "subtitle": "Aberto à oportunidade certa como engenheiro de software sênior: equipes full-stack, de plataforma ou de produtos com IA.",
     "getInTouch": "Informações de Contato",
     "readyToWork": "Pronto para trabalharmos juntos?",
-    "letsDiscuss": "Seja para arquitetar uma plataforma front-end ou ajudar uma equipe a adotar ferramentas de IA com responsabilidade, adoraria saber o que você está construindo.",
+    "letsDiscuss": "Seja para levar um produto do conceito à produção, elevar a qualidade de APIs e da plataforma ou ajudar uma equipe a adotar ferramentas de IA com responsabilidade, adoraria saber o que você está construindo.",
     "startConversation": "Iniciar uma Conversa",
     "email": "Email",
     "phone": "Telefone",
@@ -158,6 +163,7 @@
   },
   "common": {
     "logoAlt": "Derek Johnson",
-    "headshotAlt": "Derek Johnson"
+    "headshotAlt": "Derek Johnson",
+    "skipToContent": "Pular para o conteúdo"
   }
 }

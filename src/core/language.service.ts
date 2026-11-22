@@ -69,6 +69,9 @@ export class LanguageService {
   public setLanguage(language: SupportedLanguage): void {
     this._currentLanguage.set(language);
     this.translateService.use(language);
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = language === 'pt-BR' ? 'pt-BR' : 'en';
+    }
     this.saveLanguage(language);
   }
 

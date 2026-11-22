@@ -1,8 +1,12 @@
-<!-- Main Portfolio Container -->
-<main class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+<!-- Portfolio Container -->
+<div class="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-blue-600 focus:text-white focus:px-4 focus:py-2 focus:rounded-md">
+    {{ 'common.skipToContent' | translate }}
+  </a>
   <!-- Navigation Header -->
   <header
-    class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 md:bg-white/80 md:dark:bg-gray-900/80 md:backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo/Brand -->
@@ -19,8 +23,8 @@
         <div class="hidden md:block flex-1 flex justify-center">
           <div class="flex items-baseline space-x-8">
             <a href="#home" class="nav-link">{{ 'navigation.home' | translate }}</a>
-            <a href="#about" class="nav-link">{{ 'navigation.about' | translate }}</a>
             <a href="#experience" class="nav-link">{{ 'navigation.experience' | translate }}</a>
+            <a href="#about" class="nav-link">{{ 'navigation.about' | translate }}</a>
             <a href="#ai" class="nav-link">{{ 'navigation.ai' | translate }}</a>
             <a href="#projects" class="nav-link">{{ 'navigation.projects' | translate }}</a>
             <a href="#contact" class="nav-link">{{ 'navigation.contact' | translate }}</a>
@@ -35,28 +39,28 @@
           <!-- Mobile menu button -->
           <button (click)="toggleMobileMenu()"
             class="md:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 cursor-pointer"
-            aria-expanded="false">
-            <span class="sr-only">{{ 'navigation.openMainMenu' | translate }}</span>
+            [attr.aria-expanded]="isMobileMenuOpen" aria-controls="mobile-menu">
+            <span class="sr-only">{{ (isMobileMenuOpen ? 'navigation.closeMainMenu' : 'navigation.openMainMenu') | translate }}</span>
             @if (!isMobileMenuOpen) {
-            <i class="lni lni-menu-hamburger-1 text-xl"></i>
+            <i aria-hidden="true" class="lni lni-menu-hamburger-1 text-xl"></i>
             }
             @if (isMobileMenuOpen) {
-            <i class="lni lni-xmark text-xl"></i>
+            <i aria-hidden="true" class="lni lni-xmark text-xl"></i>
             }
           </button>
         </div>
       </div>
 
       <!-- Mobile menu -->
-      <div class="md:hidden mobile-menu" [class.hidden]="!isMobileMenuOpen">
+      <div id="mobile-menu" class="md:hidden mobile-menu" [class.hidden]="!isMobileMenuOpen">
         <div
           class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
           <a href="#home" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
             'navigation.home' | translate }}</a>
-          <a href="#about" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
-            'navigation.about' | translate }}</a>
           <a href="#experience" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
             'navigation.experience' | translate }}</a>
+          <a href="#about" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
+            'navigation.about' | translate }}</a>
           <a href="#ai" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
             'navigation.ai' | translate }}</a>
           <a href="#projects" class="nav-link block px-3 py-2 text-base font-medium" (click)="closeMobileMenu()">{{
@@ -69,10 +73,10 @@
   </header>
 
   <!-- Main Content -->
-  <div class="pt-16">
+  <main id="main" class="pt-16" tabindex="-1">
     <!-- Hero Section -->
     <section id="home"
-      class="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden py-8 sm:py-0">
+      class="relative md:min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden py-8 md:py-0">
       <!-- Background Pattern -->
       <div
         class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -84,7 +88,7 @@
       <!-- Animated Background Elements -->
       <div class="absolute inset-0 hero-bg-animated"></div>
 
-      <div class="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div class="relative max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         <!-- Left Content -->
         <div class="text-center lg:text-left">
           @if (utils.appSettings.openForWork) {
@@ -96,27 +100,27 @@
           </div>
           }
 
-          <h1 class="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 leading-tight">
             {{ 'hero.title' | translate }}
           </h1>
 
-          <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p class="text-lg md:text-2xl text-gray-600 dark:text-gray-300 mb-6 md:mb-8 leading-relaxed">
             {{ 'hero.subtitle' | translate }}
           </p>
 
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <div class="flex flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
             <a href="#projects" class="btn-primary">
               {{ 'hero.cta.viewMyWork' | translate }}
-              <i class="lni lni-arrow-right ml-2 transition-transform"></i>
+              <i aria-hidden="true" class="lni lni-arrow-right ml-2 transition-transform"></i>
             </a>
             <a href="assets/documents/Derek Johnson - Resume.pdf" target="_blank" class="btn-secondary">
-              <i class="lni lni-download mr-2"></i>
+              <i aria-hidden="true" class="lni lni-download mr-2"></i>
               {{ 'hero.cta.resume' | translate }}
             </a>
           </div>
 
           <!-- Social Links -->
-          <div class="mt-12 flex justify-center lg:justify-start space-x-6">
+          <div class="mt-6 md:mt-12 flex justify-center lg:justify-start space-x-6">
             @for (link of utils.appSettings.socialLinks; track link) {
             <app-social-link [platform]="link.platform" [url]="link.url" [icon]="link.icon"></app-social-link>
             }
@@ -124,10 +128,10 @@
         </div>
 
         <!-- Right Content - Profile Image -->
-        <div class="relative flex justify-center lg:justify-end">
+        <div class="relative flex justify-center lg:justify-end order-first lg:order-none">
           <div class="relative">
             <div
-              class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 p-1">
+              class="w-28 h-28 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 p-1">
               <img src="assets/images/headshot.jpg" [attr.alt]="'common.headshotAlt' | translate"
                 class="w-full h-full rounded-full object-cover" />
             </div>
@@ -136,13 +140,114 @@
       </div>
 
       <!-- Scroll Indicator -->
-      <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <i class="lni lni-chevron-down text-2xl text-gray-400 scroll-indicator"></i>
+      <div class="hidden md:block absolute bottom-8 left-1/2 -translate-x-1/2" aria-hidden="true">
+        <i aria-hidden="true" class="lni lni-chevron-down text-2xl text-gray-400 scroll-indicator"></i>
+      </div>
+    </section>
+
+    <!-- Impact Strip -->
+    <section id="impact" class="py-12 bg-gray-50 dark:bg-gray-800 border-y border-gray-200 dark:border-gray-700">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <dl class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+          @for (stat of impactStats; track stat) {
+          <div class="flex flex-col last:col-span-2 md:last:col-span-1">
+            <dt class="mt-2 text-sm text-gray-600 dark:text-gray-300">{{ ('impact.' + stat + '.label') | translate }}</dt>
+            <dd class="order-first text-3xl md:text-4xl font-bold text-gray-900 dark:text-white tabular-nums">{{ ('impact.' + stat + '.value') | translate }}</dd>
+          </div>
+          }
+        </dl>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            {{ 'experience.title' | translate }}
+          </h2>
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            {{ 'experience.subtitle' | translate }}
+          </p>
+        </div>
+
+        <ol class="timeline">
+          @for (experience of utils.appSettings.experiences; track experience; let experienceIndex = $index; let isFirst = $first; let isLast = $last) {
+          @let exp = languageService.currentLanguage === 'en-US' ? experience.en : experience.pt;
+          @let dates = exp.duration.split(' - ');
+          <li class="timeline-item">
+            <div class="timeline-meta">
+              <span class="font-semibold text-gray-900 dark:text-white">{{ dates[0] }}</span>
+              <span>{{ dates[1] }}</span>
+            </div>
+            <span class="timeline-dot" [class.is-current]="isFirst" aria-hidden="true"></span>
+            @if (!isLast) {
+            <span class="timeline-line" aria-hidden="true"></span>
+            }
+            <article class="experience-card">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div class="flex items-center">
+                  <img [src]="exp.image" [alt]="exp.company" class="h-10 mr-4 rounded-md" width="40" height="40">
+                  <div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{{ exp.title }}</h3>
+                    <p class="text-gray-600 dark:text-gray-300">{{ exp.company }}</p>
+                    <p class="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1">{{ exp.scope }}</p>
+                  </div>
+                </div>
+                <span class="text-sm text-gray-600 dark:text-gray-400 mt-2 md:hidden">{{ exp.duration }}</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">{{ exp.description }}</p>
+              <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                @for (achievement of exp.achievements.slice(0, 3); track achievement) {
+                @let a = splitAchievement(achievement);
+                <li class="flex items-start">
+                  <i class="lni lni-arrow-right text-blue-500 mr-2 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                  <span>@if (a.label) {<strong class="achievement-label">{{ a.label }}:</strong>}{{ a.body }}</span>
+                </li>
+                }
+              </ul>
+              @if (exp.achievements.length > 3) {
+              <div
+                class="achievements-panel"
+                [id]="'achievements-more-' + experienceIndex"
+                [class.is-expanded]="isAchievementsExpanded(experienceIndex)"
+                [attr.aria-hidden]="!isAchievementsExpanded(experienceIndex)"
+                [attr.inert]="isAchievementsExpanded(experienceIndex) ? null : ''">
+                <div class="achievements-panel-inner">
+                  <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 achievements-list mb-0 pt-2">
+                    @for (achievement of exp.achievements.slice(3); track achievement) {
+                    @let a = splitAchievement(achievement);
+                    <li class="flex items-start">
+                      <i class="lni lni-arrow-right text-blue-500 mr-2 mt-1 flex-shrink-0" aria-hidden="true"></i>
+                      <span>@if (a.label) {<strong class="achievement-label">{{ a.label }}:</strong>}{{ a.body }}</span>
+                    </li>
+                    }
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <button
+                  type="button"
+                  (click)="toggleAchievements(experienceIndex)"
+                  [attr.aria-expanded]="isAchievementsExpanded(experienceIndex)"
+                  [attr.aria-controls]="'achievements-more-' + experienceIndex"
+                  class="text-blue-700 dark:text-blue-400 hover:text-blue-900 dark:hover:text-blue-300 font-medium flex items-center achievement-toggle cursor-pointer">
+                  <i class="lni lni-arrow-down mr-1 achievement-arrow" aria-hidden="true"
+                     [class.rotate-180]="isAchievementsExpanded(experienceIndex)"></i>
+                  {{ isAchievementsExpanded(experienceIndex) ? ('experience.less' | translate) : ('experience.more' | translate) }}
+                </button>
+              </div>
+              }
+            </article>
+          </li>
+          }
+        </ol>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-24 bg-white dark:bg-gray-900">
+    <section id="about" class="py-24 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -158,14 +263,14 @@
           <div class="space-y-8">
             <div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
-                <i class="lni lni-book-1 mr-3 text-blue-500"></i>
+                <i aria-hidden="true" class="lni lni-book-1 mr-3 text-blue-500"></i>
                 {{ 'about.skills.title' | translate }}
               </h3>
 
               <div class="space-y-8">
                 <div class="skill-category">
                   <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <i class="lni lni-code-1 mr-2 text-green-500"></i>
+                    <i aria-hidden="true" class="lni lni-code-1 mr-2 text-green-500"></i>
                     {{'about.skills.frontend.title' | translate}}
                   </h4>
                   <div class="flex flex-wrap gap-3">
@@ -179,16 +284,18 @@
                     <span class="skill-tag">Angular Material</span>
                     <span class="skill-tag">Syncfusion Angular Components</span>
                     <span class="skill-tag">Blazor</span>
+                    <span class="skill-tag">.NET MAUI</span>
                   </div>
                 </div>
 
                 <div class="skill-category">
                   <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <i class="lni lni-monitor-code mr-2 text-blue-500"></i>
+                    <i aria-hidden="true" class="lni lni-monitor-code mr-2 text-blue-500"></i>
                     {{'about.skills.backend.title' | translate}}
                   </h4>
                   <div class="flex flex-wrap gap-3">
-                    <span class="skill-tag">.NET Maui</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">Java</span>
                     <span class="skill-tag">GraphQL</span>
                     <span class="skill-tag">REST APIs</span>
                     <span class="skill-tag">Azure DevOps CI/CD</span>
@@ -196,12 +303,26 @@
                     <span class="skill-tag">ASP.NET</span>
                     <span class="skill-tag">Microsoft Azure</span>
                     <span class="skill-tag">Azure B2C</span>
+                    <span class="skill-tag">AWS (CloudWatch, SQS, DynamoDB)</span>
                   </div>
                 </div>
 
                 <div class="skill-category">
                   <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <i class="lni lni-open-ai mr-2 text-purple-500"></i>
+                    <i aria-hidden="true" class="lni lni-bar-chart-4 mr-2 text-orange-500"></i>
+                    {{'about.skills.analytics.title' | translate}}
+                  </h4>
+                  <div class="flex flex-wrap gap-3">
+                    <span class="skill-tag">GA4</span>
+                    <span class="skill-tag">Google Tag Manager</span>
+                    <span class="skill-tag">Google Search Console</span>
+                    <span class="skill-tag">{{'about.skills.analytics.ab' | translate}}</span>
+                  </div>
+                </div>
+
+                <div class="skill-category">
+                  <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                    <i aria-hidden="true" class="lni lni-open-ai mr-2 text-purple-500"></i>
                     {{'about.skills.ai.title' | translate}}
                   </h4>
                   <div class="flex flex-wrap gap-3">
@@ -215,7 +336,7 @@
 
                 <div class="skill-category">
                   <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <i class="lni lni-mountains-2 mr-2 text-blue-500"></i>
+                    <i aria-hidden="true" class="lni lni-mountains-2 mr-2 text-blue-500"></i>
                     {{'about.skills.outsideOfWork.title' | translate}}
                   </h4>
                   <div class="flex flex-wrap gap-3">
@@ -234,8 +355,8 @@
           <div
             class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-600">
             <div class="flex items-center mb-6">
-              <div class="w-12 h-12 bg-blue-200 dark:bg-blue-500 rounded-lg flex items-center justify-center mr-4">
-                <i class="lni lni-briefcase-1 text-white text-xl"></i>
+              <div class="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                <i aria-hidden="true" class="lni lni-briefcase-1 text-white text-xl"></i>
               </div>
               <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
                 {{ 'about.experience.title' | translate }}
@@ -250,124 +371,32 @@
               <div class="flex items-start">
                 <div
                   class="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                  <i class="lni lni-check text-green-600 dark:text-green-400 text-sm"></i>
+                  <i aria-hidden="true" class="lni lni-check text-green-600 dark:text-green-400 text-sm"></i>
                 </div>
                 <p class="text-gray-700 dark:text-gray-300 text-sm">{{ 'about.experience.point1' | translate }}</p>
               </div>
               <div class="flex items-start">
                 <div
                   class="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                  <i class="lni lni-check text-green-600 dark:text-green-400 text-sm"></i>
+                  <i aria-hidden="true" class="lni lni-check text-green-600 dark:text-green-400 text-sm"></i>
                 </div>
                 <p class="text-gray-700 dark:text-gray-300 text-sm">{{ 'about.experience.point2' | translate }}</p>
               </div>
               <div class="flex items-start">
                 <div
                   class="w-6 h-6 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
-                  <i class="lni lni-check text-green-600 dark:text-green-400 text-sm"></i>
+                  <i aria-hidden="true" class="lni lni-check text-green-600 dark:text-green-400 text-sm"></i>
                 </div>
                 <p class="text-gray-700 dark:text-gray-300 text-sm">{{ 'about.experience.point3' | translate }}</p>
               </div>
             </div>
           </div>
         </div>
-        <!-- Quote Section -->
-        <div class="mb-8 mt-16">
-          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
-            <i class="lni lni-quotation-1 mr-3 text-blue-500"></i>
-            {{ 'about.quote.title' | translate }}
-          </h3>
-          <div class="quote-card-about">
-            <blockquote class="quote-text-about">
-              "{{ 'about.quote.text' | translate }}"
-            </blockquote>
-            <cite class="quote-author-about">— {{ 'about.quote.author' | translate }}</cite>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-22">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {{ 'experience.title' | translate }}
-          </h2>
-          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            {{ 'experience.subtitle' | translate }}
-          </p>
-        </div>
-
-        <div class="space-y-12">
-          <!-- Current Role -->
-          @for (experience of utils.appSettings.experiences; track experience; let experienceIndex = $index) {
-          <div class="experience-card">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-              <div class="flex items-center">
-                <img src="{{ experience.en.image }}"
-                  alt="{{ languageService.currentLanguage === 'en-US' ? experience.en.title : experience.pt.title }}"
-                  class="h-10 mr-4 rounded-md">
-                <div>
-                  <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    {{ languageService.currentLanguage === 'en-US' ? experience.en.title : experience.pt.title }}
-                  </h3>
-                  <p class="text-gray-600 dark:text-gray-300">
-                    {{ languageService.currentLanguage === 'en-US' ? experience.en.company : experience.pt.company }}
-                  </p>
-                </div>
-              </div>
-              <span class="text-sm text-gray-500 dark:text-gray-400 mt-2 md:mt-0">
-                {{ languageService.currentLanguage === 'en-US' ? experience.en.duration : experience.pt.duration }}
-              </span>
-            </div>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">
-              {{ languageService.currentLanguage === 'en-US' ? experience.en.description : experience.pt.description }}
-            </p>
-            <div
-              class="achievements-panel"
-              [class.is-expanded]="isAchievementsExpanded(experienceIndex)"
-              [attr.aria-hidden]="!isAchievementsExpanded(experienceIndex)">
-              <div class="achievements-panel-inner">
-                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 achievements-list mb-0">
-                  @if (languageService.currentLanguage === 'en-US') {
-                    @for (achievement of experience.en.achievements; track achievement) {
-                      <li class="flex items-start">
-                        <i class="lni lni-arrow-right text-blue-500 mr-2 mt-1 flex-shrink-0"></i>
-                        {{ achievement }}
-                      </li>
-                    }
-                  } @else {
-                    @for (achievement of experience.pt.achievements; track achievement) {
-                      <li class="flex items-start">
-                        <i class="lni lni-arrow-right text-blue-500 mr-2 mt-1 flex-shrink-0"></i>
-                        {{ achievement }}
-                      </li>
-                    }
-                  }
-                </ul>
-              </div>
-            </div>
-
-            <div class="mt-4">
-              <button
-                type="button"
-                (click)="toggleAchievements(experienceIndex)"
-                [attr.aria-expanded]="isAchievementsExpanded(experienceIndex)"
-                class="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium flex items-center achievement-toggle cursor-pointer">
-                <i class="lni lni-arrow-down mr-1 achievement-arrow"
-                   [class.rotate-180]="isAchievementsExpanded(experienceIndex)"></i>
-                {{ isAchievementsExpanded(experienceIndex) ? ('experience.less' | translate) : ('experience.more' | translate) }}
-              </button>
-            </div>
-          </div>
-          }
-        </div>
       </div>
     </section>
 
     <!-- AI Experience Section -->
-    <section id="ai" class="py-24 bg-gray-50 dark:bg-gray-800">
+    <section id="ai" class="py-24 bg-white dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
@@ -385,7 +414,7 @@
           @for (capability of utils.appSettings.aiCapabilities; track capability.id) {
           <div class="ai-capability-card">
             <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center mb-4">
-              <i class="{{ capability.icon }} text-xl text-blue-600 dark:text-blue-400"></i>
+              <i aria-hidden="true" class="{{ capability.icon }} text-xl text-blue-600 dark:text-blue-400"></i>
             </div>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
               {{ ('ai.items.' + capability.id + '.title') | translate }}
@@ -400,9 +429,9 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-white dark:bg-gray-900">
+    <section id="projects" class="py-24 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-20">
+        <div class="text-center mb-16">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             {{ 'projects.title' | translate }}
           </h2>
@@ -411,43 +440,72 @@
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project 1 -->
-          @for (project of utils.appSettings.projects; track project) {
-            <div class="group project-card-enhanced">
-              <div class="relative overflow-hidden rounded-t-2xl">
-                <div
-                  class="project-image-enhanced bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 h-56 flex items-center justify-center relative">
-                  <i class="lni lni-code-1 text-8xl text-white opacity-90"></i>
-                  <div
-                    class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300">
-                  <img src="{{ project.en.image }}" alt="{{ languageService.currentLanguage === 'en-US' ? project.en.title : project.pt.title }}" class="w-full h-full object-cover">
-                  </div>
-                </div>
-              </div>
-              <div class="p-8">
-                <div class="flex items-center justify-between mb-4">
-                  <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                    {{ languageService.currentLanguage === 'en-US' ? project.en.title : project.pt.title }}
-                  </h3>
-                  <div class="flex space-x-2">
-                    @for (link of project.en.links; track link) {
-                    <a href="{{ link.url }}" class="project-link-enhanced" [attr.title]="'projects.viewProject' | translate">
-                      <i class="{{ link.icon }}"></i>
-                    </a>
+        <!-- Architecture diagrams -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2 text-center">{{ 'projects.architectureTitle' | translate }}</h3>
+          <p class="text-gray-600 dark:text-gray-300 text-center mb-6">{{ 'projects.architectureSubtitle' | translate }}</p>
+          <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-700 dark:text-gray-300 mb-8">
+            <li><span class="legend-swatch flow-node--built" aria-hidden="true"></span>{{ 'projects.legend.built' | translate }}</li>
+            <li><span class="legend-swatch flow-node--contributed" aria-hidden="true"></span>{{ 'projects.legend.contributed' | translate }}</li>
+            <li><span class="legend-swatch flow-node--external" aria-hidden="true"></span>{{ 'projects.legend.external' | translate }}</li>
+          </ul>
+          <div class="grid lg:grid-cols-2 gap-8">
+            @for (arch of utils.appSettings.architectures; track arch.id) {
+            @let text = languageService.currentLanguage === 'en-US' ? arch.en : arch.pt;
+            <figure class="arch-figure" [attr.aria-labelledby]="'arch-title-' + arch.id">
+              <figcaption class="mb-6">
+                <h4 [id]="'arch-title-' + arch.id" class="text-lg font-semibold text-gray-900 dark:text-white">{{ text.title }}</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">{{ text.caption }}</p>
+              </figcaption>
+              <ol>
+                @for (stage of arch.stages; track $index) {
+                <li class="flow-stage">
+                  <ul class="flex flex-wrap justify-center gap-2">
+                    @for (node of stage; track $index) {
+                    @let n = languageService.currentLanguage === 'en-US' ? node.en : node.pt;
+                    <li class="flow-node" [class]="'flow-node flow-node--' + node.role">
+                      <span class="text-sm font-semibold">{{ n.label }}</span>
+                      <span class="flow-node-detail">{{ n.detail }}</span>
+                      <span class="sr-only">({{ ('projects.legend.' + node.role) | translate }})</span>
+                    </li>
                     }
-                  </div>
-                </div>
-                <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  {{ languageService.currentLanguage === 'en-US' ? project.en.description : project.pt.description }}
-                </p>
-                <div class="flex flex-wrap gap-2 mb-6">
-                  @for (technology of project.en.technologies; track technology) {
-                  <span class="tech-tag-enhanced">{{ technology }}</span>
-                  }
-                </div>
-              </div>
+                  </ul>
+                </li>
+                }
+              </ol>
+            </figure>
+            }
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          @for (project of utils.appSettings.projects; track project) {
+          @let proj = languageService.currentLanguage === 'en-US' ? project.en : project.pt;
+          <article class="project-card-enhanced">
+            <div class="h-56 bg-gray-100 dark:bg-gray-700 overflow-hidden">
+              <img [src]="proj.image" alt="" class="w-full h-full object-cover" loading="lazy">
             </div>
+            <div class="p-8 flex flex-col flex-1">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">{{ proj.title }}</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{{ proj.description }}</p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                @for (technology of proj.technologies; track technology) {
+                <span class="tech-tag-enhanced">{{ technology }}</span>
+                }
+              </div>
+              @if (proj.links.length) {
+              <div class="flex flex-wrap gap-2 mt-auto">
+                @for (link of proj.links; track link.url) {
+                <a [href]="link.url" target="_blank" rel="noopener noreferrer" class="project-link-enhanced"
+                   [attr.aria-label]="proj.title + ': ' + (linkLabelKey(link.icon) | translate)">
+                  <i [class]="link.icon" aria-hidden="true"></i>
+                  {{ linkLabelKey(link.icon) | translate }}
+                </a>
+                }
+              </div>
+              }
+            </div>
+          </article>
           }
         </div>
       </div>
@@ -476,7 +534,7 @@
               <div class="space-y-6">
                 <div class="contact-item">
                   <div class="contact-icon">
-                    <i class="lni lni-envelope-1"></i>
+                    <i aria-hidden="true" class="lni lni-envelope-1"></i>
                   </div>
                   <div>
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white">{{ 'contact.email' | translate }}</h4>
@@ -489,7 +547,7 @@
 
                 <div class="contact-item">
                   <div class="contact-icon">
-                    <i class="lni lni-telephone-1"></i>
+                    <i aria-hidden="true" class="lni lni-telephone-1"></i>
                   </div>
                   <div>
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white">{{ 'contact.phone' | translate }}</h4>
@@ -502,7 +560,7 @@
 
                 <div class="contact-item">
                   <div class="contact-icon">
-                    <i class="lni lni-map-marker-5"></i>
+                    <i aria-hidden="true" class="lni lni-map-marker-5"></i>
                   </div>
                   <div>
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white">{{ 'contact.location' | translate }}</h4>
@@ -533,8 +591,8 @@
             <div
               class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-600">
               <div class="flex items-center mb-6">
-                <div class="w-12 h-12 bg-blue-200 dark:bg-blue-500 rounded-lg flex items-center justify-center mr-4">
-                  <i class="lni lni-download-1 text-white text-xl"></i>
+                <div class="w-12 h-12 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                  <i aria-hidden="true" class="lni lni-download-1 text-white text-xl"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
                   {{ 'contact.downloadResume' | translate }}
@@ -546,9 +604,9 @@
               </p>
 
               <a href="assets/documents/Derek Johnson - Resume.pdf" target="_blank" class="btn-primary w-full">
-                <i class="lni lni-download mr-2"></i>
+                <i aria-hidden="true" class="lni lni-download mr-2"></i>
                 {{ 'contact.downloadPDF' | translate }}
-                <i class="lni lni-arrow-right ml-2 transition-transform"></i>
+                <i aria-hidden="true" class="lni lni-arrow-right ml-2 transition-transform"></i>
               </a>
             </div>
 
@@ -559,27 +617,27 @@
               <p class="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                 {{ 'contact.letsDiscuss' | translate }}
               </p>
-              <a href="mailto:derekjohnson277@gmail.com"
+              <a href="mailto:{{utils.appSettings.email}}"
                 class="btn-secondary bg-white text-gray-900 hover:bg-gray-100 w-full">
-                <i class="lni lni-envelope mr-2"></i>
+                <i aria-hidden="true" class="lni lni-envelope mr-2"></i>
                 {{ 'contact.startConversation' | translate }}
-                <i class="lni lni-arrow-right ml-2 transition-transform"></i>
+                <i aria-hidden="true" class="lni lni-arrow-right ml-2 transition-transform"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </div>
+  </main>
 
   <!-- Footer -->
   <footer class="border-t border-gray-200 dark:border-gray-700 text-white py-2">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <p class="text-gray-400 text-xs">
+        <p class="text-gray-600 dark:text-gray-400 text-xs">
           {{ 'footer.copyright' | translate:{ year: utils.getCurrentYear() } }} {{ 'footer.rightsReserved' | translate }}
         </p>
       </div>
     </div>
   </footer>
-</main>
+</div>

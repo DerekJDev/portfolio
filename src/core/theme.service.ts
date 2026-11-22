@@ -50,8 +50,17 @@ export class ThemeService {
 
   public toggleTheme(): void {
     const newTheme = !this._isDarkMode();
-    this._isDarkMode.set(newTheme);
-    this.applyTheme(newTheme);
+    const update = () => {
+      this._isDarkMode.set(newTheme);
+      this.applyTheme(newTheme);
+    };
+    const doc = typeof document !== 'undefined' ? (document as Document & { startViewTransition?: (cb: () => void) => unknown }) : null;
+    const reduceMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (doc?.startViewTransition && !reduceMotion) {
+      doc.startViewTransition(update);
+    } else {
+      update();
+    }
     this.saveTheme(newTheme);
   }
 

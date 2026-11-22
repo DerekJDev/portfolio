@@ -12,8 +12,9 @@ import { TranslateModule } from '@ngx-translate/core';
       [rel]="rel"
       class="social-link"
       [attr.title]="'social.profile' | translate:{ platform: platform }"
+      [attr.aria-label]="'social.profile' | translate:{ platform: platform }"
     >
-      <i [class]="icon"></i>
+      <i [class]="icon" aria-hidden="true"></i>
     </a>
   `,
   changeDetection: ChangeDetectionStrategy.Eager,
